@@ -1,0 +1,8 @@
+[
+  {
+    "op": "replace",
+    "path": "/classByType/*-fired",
+    "value": "CustomBlockCookingContainer",
+    "file": "game:blocktypes/clay/fired/pot.json"
+  }
+]

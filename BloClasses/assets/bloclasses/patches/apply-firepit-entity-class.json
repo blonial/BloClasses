@@ -1,0 +1,8 @@
+[
+  {
+    "op": "replace",
+    "path": "/entityClass",
+    "value": "CustomBlockEntityFirepit",
+    "file": "game:blocktypes/wood/firepit.json"
+  }
+]

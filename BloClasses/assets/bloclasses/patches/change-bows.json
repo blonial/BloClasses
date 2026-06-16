@@ -1,0 +1,14 @@
+[
+  {
+    "op": "addmerge",
+    "path": "/0/requiresTrait",
+    "value": "bcbowyer",
+    "file": "game:recipes/grid/tool/bow.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/4/requiresTrait",
+    "value": "bcbowyer",
+    "file": "game:recipes/grid/tool/bow.json"
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "ingredientPattern": "H_\tSB\tF_",
+    "requiresTrait": "bcbowyer",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:arrowhead-*",
+        "name": "metal",
+        "allowedVariants": ["iron", "meteoriciron", "steel"]
+      },
+      "S": {
+        "type": "item",
+        "code": "game:stick"
+      },
+      "F": {
+        "type": "item",
+        "code": "game:feather"
+      },
+      "B": {
+        "type": "item",
+        "code": "game:flaxtwine"
+      }
+    },
+    "width": 2,
+    "height": 3,
+    "output": {
+      "type": "item",
+      "code": "bloclasses:arrow-reinforced-{metal}",
+      "quantity": 1
+    }
+  }
+]

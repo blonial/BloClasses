@@ -1,0 +1,8 @@
+[
+  {
+    "op": "addmerge",
+    "path": "/1/requiresTrait",
+    "value": "bcbowyer",
+    "file": "game:recipes/grid/tool/arrow.json"
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "code": "bcfocused",
+    "type": "positive",
+    "attributes": {
+      "rangedWeaponsDamage": 0.25,
+      "rangedWeaponsAcc": 0.3,
+      "bowDrawingStrength": 0.2
+    }
+  },
+  {
+    "code": "bcresourceful",
+    "type": "positive",
+    "attributes": {
+      "animalLootDropRate": 0.15,
+      "animalHarvestingTime": -0.5
+    }
+  },
+  {
+    "code": "bcfleetfooted",
+    "type": "positive",
+    "attributes": {
+      "walkspeed": 0.05
+    }
+  },
+  {
+    "code": "bcbowyer",
+    "type": "positive",
+    "attributes": {}
+  },
+  {
+    "code": "bcfarsighted",
+    "type": "negative",
+    "attributes": {
+      "meleeWeaponsDamage": -0.25
+    }
+  },
+  {
+    "code": "bcclaustrophobic",
+    "type": "negative",
+    "attributes": {
+      "oreDropRate": -0.15,
+      "miningSpeedMul": -0.15
+    }
+  },
+  {
+    "code": "bcfrail",
+    "type": "negative",
+    "attributes": {
+      "maxhealthExtraPoints": -4
+    }
+  }
+]
