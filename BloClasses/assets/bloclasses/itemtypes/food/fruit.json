@@ -1,0 +1,134 @@
+{
+  "code": "fruit",
+  "behaviors": [
+    {
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Quadrants",
+        "collisionBox": {
+          "x1": 0,
+          "y1": 0,
+          "z1": 0,
+          "x2": 1,
+          "y2": 0.125,
+          "z2": 1
+        }
+      }
+    }
+  ],
+  "variantgroups": [{ "code": "fruit", "states": ["pineapple"] }],
+  "shapebytype": {
+    "*": { "base": "game:item/food/fruit/pineapple-slice" }
+  },
+  "textureByType": {
+    "*": { "base": "game:item/food/fruit/{fruit}" }
+  },
+  "attributes": {
+    "foodTags": ["{fruit}", "fruit"],
+    "handbook": {
+      "groupBy": ["fruit-*"]
+    },
+    "nutritionPropsWhenInMeal": {
+      "satietyByType": {
+        "*": 240
+      },
+      "foodcategory": "Fruit"
+    },
+    "eatHealthEffectDurationSec": 10,
+    "eatHealthEffectTicks": 10,
+    "inPiePropertiesByType": {
+      "*": {
+        "texture": "game:block/food/pie/fill-{fruit}",
+        "partType": "Filling"
+      }
+    },
+    "juiceablePropertiesByType": {
+      "*": {
+        "litresPerItem": 0.625,
+        "liquidStack": {
+          "type": "item",
+          "code": "game:juiceportion-{fruit}",
+          "stacksize": 1
+        },
+        "pressedStack": {
+          "type": "item",
+          "code": "game:pressedmash-{fruit}",
+          "stacksize": 2
+        }
+      }
+    },
+    "groundStorageTransformByType": {
+      "*": {
+        "origin": { "x": 0.5, "y": -0, "z": 0.5 }
+      }
+    },
+    "inTrapTransformByType": {
+      "*": {
+        "small": {
+          "translation": { "x": -0.1, "y": -0.08, "z": 0 },
+          "rotation": { "x": 0, "y": 17, "z": 0 },
+          "scale": 0.6
+        },
+        "large": {
+          "translation": { "x": -0.1, "y": 0.16, "z": -0.05 },
+          "rotation": { "x": 134, "y": 0, "z": -92 },
+          "scale": 0.6
+        }
+      }
+    },
+    "inMouthTransformByType": {
+      "*": {
+        "translation": { "x": -1.98, "y": -1.09, "z": -1.34 },
+        "rotation": { "x": 2, "y": 1, "z": -87 },
+        "scale": 0.41
+      }
+    },
+    "displayable": {
+      "shelf": {
+        "size": { "width": 4, "height": 4, "length": 4 }
+      }
+    }
+  },
+  "creativeinventory": { "general": ["*"], "items": ["*"] },
+  "maxstacksize": 64,
+  "materialDensityByType": {},
+  "nutritionPropsByType": {
+    "*": { "satiety": 160, "foodcategory": "Fruit" }
+  },
+  "transitionablePropsByType": {
+    "*": [
+      {
+        "type": "Perish",
+        "freshHours": { "avg": 48 },
+        "transitionHours": { "avg": 12 },
+        "transitionedStack": { "type": "item", "code": "game:rot" },
+        "transitionRatio": 0.25
+      }
+    ]
+  },
+  "guiTransformByType": {
+    "*": {
+      "translation": { "x": 2, "y": 3, "z": 0 },
+      "rotation": { "x": 127, "y": 180, "z": 23 },
+      "origin": { "x": 0.55, "y": 0.05, "z": 0.5 },
+      "scale": 2.04
+    }
+  },
+  "tpHandTransformByType": {
+    "*": {
+      "translation": { "x": -1.98, "y": -0.99, "z": -1.22 },
+      "rotation": { "x": 2, "y": 1, "z": -87 },
+      "scale": 0.41
+    }
+  },
+  "groundTransformByType": {
+    "*": {
+      "translation": { "x": 0, "y": 0, "z": 0 },
+      "rotation": { "x": 0, "y": 0, "z": -3 },
+      "origin": { "x": 0.47, "y": 0, "z": 0.5 },
+      "scale": 2.35
+    }
+  },
+  "heldRightReadyAnimationByType": {},
+  "heldTpIdleAnimationByType": {}
+}

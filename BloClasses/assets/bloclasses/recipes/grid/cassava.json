@@ -1,0 +1,14 @@
+{
+  "ingredientPattern": "K,P",
+  "ingredients": {
+    "K": { "type": "item", "tags": ["tool-knife"], "isTool": true },
+    "P": { "type": "item", "code": "bloclasses:rawcassava-soaked" }
+  },
+  "width": 1,
+  "height": 2,
+  "output": {
+    "type": "item",
+    "code": "bloclasses:vegetable-cassava",
+    "quantity": 1
+  }
+}

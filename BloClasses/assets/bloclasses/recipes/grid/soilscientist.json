@@ -1,0 +1,30 @@
+[
+  {
+    "ingredientPattern": "CKC\tBSB\tCKC",
+    "requiresTrait": "bcsoilscientist",
+    "ingredients": {
+      "C": { "type": "item", "code": "game:bonemeal", "quantity": 3 },
+      "S": { "type": "item", "code": "game:powder-charcoal", "quantity": 6 },
+      "B": { "type": "item", "code": "game:compost", "quantity": 2 },
+      "K": { "type": "item", "code": "game:compost", "quantity": 1 }
+    },
+    "recipeGroup": 1,
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "game:soil-high-none", "quantity": 1 }
+  },
+  {
+    "ingredientPattern": "CBC\tKSK\tCBC",
+    "requiresTrait": "bcsoilscientist",
+    "ingredients": {
+      "C": { "type": "item", "code": "game:compost", "quantity": 3 },
+      "S": { "type": "block", "code": "game:soil-compost-none", "quantity": 1 },
+      "K": { "type": "item", "code": "game:powder-charcoal", "quantity": 3 },
+      "B": { "type": "item", "code": "game:bonemeal", "quantity": 3 }
+    },
+    "recipeGroup": 2,
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "game:soil-high-none", "quantity": 2 }
+  }
+]

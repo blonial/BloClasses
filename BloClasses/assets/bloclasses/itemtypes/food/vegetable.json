@@ -1,0 +1,381 @@
+{
+  "code": "vegetable",
+  "maxstacksize": 64,
+  "behaviors": [
+    {
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Quadrants",
+        "collisionBox": {
+          "x1": 0,
+          "y1": 0,
+          "z1": 0,
+          "x2": 1,
+          "y2": 0.125,
+          "z2": 1
+        }
+      }
+    }
+  ],
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [
+        "carrot",
+        "cabbage",
+        "onion",
+        "turnip",
+        "parsnip",
+        "cassava",
+        "fennel"
+      ]
+    }
+  ],
+  "shapebytype": {
+    "*": { "base": "game:item/food/vegetable/{type}" }
+  },
+  "attributes": {
+    "handbook": {
+      "groupBy": ["vegetable-*", "legume-*", "rawcassava-*"]
+    },
+    "inTrapTransformByType": {
+      "*-cabbage": {
+        "small": {
+          "translation": { "x": -0.2, "y": 0.13, "z": 0 }
+        },
+        "large": {
+          "translation": { "x": 0, "y": -0.07, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": -150 }
+        }
+      },
+      "@.*-(carrot|parsnip)": {
+        "small": {
+          "translation": { "x": -0.15, "y": -0.4, "z": -0.3 },
+          "rotation": { "x": -90, "y": 0, "z": 0 }
+        },
+        "large": {
+          "translation": { "x": -0.35, "y": 0.35, "z": -0.3 },
+          "rotation": { "x": -90, "y": 0, "z": 0 }
+        }
+      },
+      "@.*-(onion|fennel)": {
+        "small": {
+          "translation": { "x": -0.18, "y": -0.36, "z": -0.45 },
+          "rotation": { "x": -90, "y": 0, "z": 0 }
+        },
+        "large": {
+          "translation": { "x": -0.33, "y": 0.34, "z": -0.42 },
+          "rotation": { "x": -90, "y": 0, "z": 0 }
+        }
+      },
+      "*-turnip": {
+        "small": {
+          "translation": { "x": -0.1, "y": -0.35, "z": -0.3 },
+          "rotation": { "x": -90, "y": 0, "z": 0 }
+        },
+        "large": {
+          "translation": { "x": -0.3, "y": 0.34, "z": -0.3 },
+          "rotation": { "x": -90, "y": 0, "z": 0 }
+        }
+      },
+      "*root": {
+        "small": {
+          "translation": { "x": -0.15, "y": -0.32, "z": -0.1 },
+          "rotation": { "x": -90, "y": 0, "z": 0 },
+          "scale": 0.85
+        },
+        "large": {
+          "translation": { "x": -0.32, "y": 0.29, "z": -0.1 },
+          "rotation": { "x": -97, "y": 86, "z": -39 },
+          "scale": 0.85
+        }
+      },
+      "*": {
+        "translation": { "x": -0.15, "y": -0.4, "z": -0.3 },
+        "rotation": { "x": -90, "y": 0, "z": 0 }
+      }
+    }
+  },
+  "attributesByType": {
+    "*-cabbage": {
+      "foodTags": ["{type}", "tastyvegetable"],
+      "inContainerTexture": { "base": "game:block/wood/barrel/raw-{type}" },
+      "nutritionPropsWhenInMeal": {
+        "satiety": 900,
+        "foodcategory": "vegetable"
+      },
+      "inPieProperties": {
+        "texture": "game:block/food/pie/fill-{type}",
+        "partType": "Filling",
+        "mixingCodes": ["potpie"]
+      },
+      "displayable": {
+        "shelf": {
+          "size": { "width": 4, "height": 4, "length": 4 }
+        }
+      }
+    },
+    "*-cassava": {
+      "foodTags": ["{type}"],
+      "inContainerTexture": { "base": "game:block/wood/barrel/peeled-{type}" },
+      "nutritionPropsWhenInMeal": {
+        "satiety": 240,
+        "foodcategory": "vegetable"
+      },
+      "inPieProperties": {
+        "texture": "game:block/food/pie/fill-{type}",
+        "partType": "Filling",
+        "mixingCodes": ["potpie"]
+      },
+      "handbook": {
+        "extraSections": [
+          {
+            "title": "game:item-handbooktitle-cassava",
+            "text": "game:item-handbooktext-cassava"
+          }
+        ]
+      },
+      "displayable": {
+        "shelf": {
+          "size": { "width": 4, "height": 4, "length": 4 }
+        }
+      }
+    },
+    "*-onion": {
+      "foodTags": ["{type}"],
+      "inContainerTexture": { "base": "game:block/wood/barrel/raw-{type}" },
+      "nutritionPropsWhenInMeal": {
+        "satiety": 300,
+        "foodcategory": "vegetable"
+      },
+      "inPieProperties": {
+        "texture": "game:block/food/pie/fill-{type}",
+        "partType": "Filling",
+        "mixingCodes": ["potpie"]
+      },
+      "groundStorageTransform": {
+        "translation": { "x": -0.3, "y": -0.45, "z": 0.2 },
+        "rotation": { "x": 0, "y": 33, "z": 90 }
+      },
+      "displayable": {
+        "shelf": {
+          "size": { "width": 4, "height": 4, "length": 4 }
+        }
+      }
+    },
+    "*-fennel": {
+      "foodTags": ["{type}"],
+      "inContainerTexture": { "base": "game:block/wood/barrel/raw-{type}" },
+      "nutritionPropsWhenInMeal": {
+        "satiety": 120,
+        "foodcategory": "vegetable"
+      },
+      "inPieProperties": {
+        "texture": "game:block/food/pie/fill-{type}",
+        "partType": "Filling",
+        "mixingCodes": ["potpie"]
+      },
+      "groundStorageTransform": {
+        "translation": { "x": -0.3, "y": -0.45, "z": 0.2 },
+        "rotation": { "x": 0, "y": 33, "z": 90 }
+      },
+      "displayable": {
+        "shelf": {
+          "size": { "width": 4, "height": 4, "length": 4 }
+        }
+      }
+    },
+    "*": {
+      "foodTags": ["{type}", "tastyvegetable"],
+      "inContainerTexture": { "base": "game:block/wood/barrel/raw-{type}" },
+      "nutritionPropsWhenInMeal": {
+        "satiety": 300,
+        "foodcategory": "vegetable"
+      },
+      "inPieProperties": {
+        "texture": "game:block/food/pie/fill-{type}",
+        "partType": "Filling",
+        "mixingCodes": ["potpie"]
+      },
+      "groundStorageTransform": {
+        "translation": { "x": -0.2, "y": -0.45, "z": 0.1 },
+        "rotation": { "x": 0, "y": 33, "z": 90 }
+      },
+      "displayable": {
+        "shelf": {
+          "size": { "width": 4, "height": 4, "length": 4 }
+        }
+      }
+    }
+  },
+  "heldTpIdleAnimationByType": {
+    "*-cabbage": "holdbothhandslarge"
+  },
+  "heldRightReadyAnimationByType": {
+    "*-cabbage": "holdbothhandslarge"
+  },
+  "creativeinventory": { "general": ["*"], "items": ["*"] },
+  "nutritionPropsByType": {
+    "*-cabbage": { "satiety": 600, "foodcategory": "vegetable" },
+    "*-fennel": { "satiety": 100, "foodcategory": "vegetable" },
+    "*": { "satiety": 200, "foodcategory": "vegetable" }
+  },
+  "transitionablePropsByType": {
+    "*-onion": [
+      {
+        "type": "Perish",
+        "freshHours": { "avg": 672 },
+        "transitionHours": { "avg": 120 },
+        "transitionedStack": { "type": "item", "code": "game:rot" },
+        "transitionRatio": 0.5
+      }
+    ],
+    "*-cassava": [
+      {
+        "type": "Perish",
+        "freshHours": { "avg": 240 },
+        "transitionHours": { "avg": 48 },
+        "transitionedStack": { "type": "item", "code": "game:rot" },
+        "transitionRatio": 1
+      },
+      {
+        "type": "Dry",
+        "freshHours": { "avg": 6 },
+        "transitionHours": { "avg": 48 },
+        "transitionedStack": {
+          "type": "item",
+          "code": "game:rawcassava-dried"
+        },
+        "transitionRatio": 1
+      }
+    ],
+    "*": [
+      {
+        "type": "Perish",
+        "freshHours": { "avg": 504 },
+        "transitionHours": { "avg": 96 },
+        "transitionedStack": { "type": "item", "code": "game:rot" },
+        "transitionRatio": 0.5
+      }
+    ]
+  },
+  "materialDensity": 600,
+  "guiTransformByType": {
+    "*-cabbage": {
+      "translation": { "x": 2.5, "y": 1, "z": 0 },
+      "rotation": { "x": 137, "y": 131, "z": 0 },
+      "origin": { "x": 0.5, "y": 0.2, "z": 0.5 },
+      "scale": 2.6
+    },
+    "*-carrot": {
+      "translation": { "x": 2, "y": 1, "z": 0 },
+      "rotation": { "x": 180, "y": 44, "z": 56 },
+      "origin": { "x": 0.5, "y": 0.26, "z": 0.5 },
+      "scale": 4.4
+    },
+    "*-onion": {
+      "translation": { "x": 0, "y": 0, "z": 0 },
+      "rotation": { "x": -37, "y": 135, "z": -155 },
+      "origin": { "x": 0.5, "y": 0.15, "z": 0.5 },
+      "scale": 4.85
+    },
+    "*-fennel": {
+      "rotation": { "x": -37, "y": 135, "z": -155 },
+      "origin": { "x": 0.42, "y": 0.22, "z": 0.5 },
+      "scale": 2.93
+    },
+    "*-parsnip": {
+      "translation": { "x": 0, "y": 0, "z": 0 },
+      "rotation": { "x": 180, "y": 43, "z": 52 },
+      "origin": { "x": 0.5, "y": 0.3, "z": 0.5 },
+      "scale": 4.44
+    },
+    "*-turnip": {
+      "translation": { "x": 2, "y": 2, "z": 0 },
+      "rotation": { "x": 180, "y": 158, "z": 38 },
+      "origin": { "x": 0.5, "y": 0.23, "z": 0.5 },
+      "scale": 3.6
+    },
+    "*-cassava": {
+      "translation": { "x": 0, "y": 0, "z": 0 },
+      "rotation": { "x": 134, "y": -173, "z": -8 },
+      "origin": { "x": 0.5, "y": 0.09, "z": 0.5 },
+      "scale": 3
+    }
+  },
+  "tpHandTransformByType": {
+    "*-cabbage": {
+      "translation": { "x": -0.6, "y": 0.06, "z": -0.38 },
+      "rotation": { "x": -33, "y": 9, "z": -95 },
+      "origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
+      "scale": 0.79
+    },
+    "*-carrot": {
+      "translation": { "x": -0.57, "y": -0.14, "z": -0.56 },
+      "rotation": { "x": 0, "y": 0, "z": -89 },
+      "origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
+      "scale": 0.88
+    },
+    "@.*-(onion|fennel)": {
+      "translation": { "x": -0.75, "y": -0.13, "z": -0.57 },
+      "rotation": { "x": 0, "y": 0, "z": -67 },
+      "origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
+      "scale": 0.84
+    },
+    "*-parsnip": {
+      "translation": { "x": -0.57, "y": -0.14, "z": -0.56 },
+      "rotation": { "x": 0, "y": 0, "z": -89 },
+      "origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
+      "scale": 0.88
+    },
+    "*-turnip": {
+      "translation": { "x": -0.68, "y": -0.18, "z": -0.6 },
+      "rotation": { "x": 0, "y": 0, "z": -84 },
+      "origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
+      "scale": 0.8
+    },
+    "*-cassava": {
+      "translation": { "x": -0.9, "y": -0.3, "z": -0.7 },
+      "rotation": { "x": 0, "y": -21, "z": 1 },
+      "scale": 0.69
+    }
+  },
+  "groundTransformByType": {
+    "*-cabbage": {
+      "translation": { "x": 0, "y": 0, "z": 0 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
+      "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+      "scale": 3.5
+    },
+    "*-carrot": {
+      "translation": { "x": 0, "y": 0, "z": 0 },
+      "rotation": { "x": 0, "y": 0, "z": 83 },
+      "origin": { "x": 0.45, "y": 0.25, "z": 0.49 },
+      "scale": 4.3
+    },
+    "@.*-(onion|fennel)": {
+      "translation": { "x": 0, "y": 0, "z": 0 },
+      "rotation": { "x": 0, "y": 0, "z": 83 },
+      "origin": { "x": 0.47, "y": 0, "z": 0.5 },
+      "scale": 4.3
+    },
+    "*-parsnip": {
+      "translation": { "x": 0, "y": 0, "z": 0 },
+      "rotation": { "x": 0, "y": 0, "z": 83 },
+      "origin": { "x": 0.45, "y": 0.25, "z": 0.49 },
+      "scale": 4.3
+    },
+    "*-turnip": {
+      "translation": { "x": 0, "y": 0, "z": 0 },
+      "rotation": { "x": 0, "y": 0, "z": 75 },
+      "origin": { "x": 0.42, "y": 0.21, "z": 0.5 },
+      "scale": 3.8
+    },
+    "*-cassava": {
+      "translation": { "x": 0, "y": 0, "z": 0 },
+      "rotation": { "x": 97, "y": -18, "z": -16 },
+      "origin": { "x": 0.5, "y": 0.5, "z": 0.5299 },
+      "scale": 2.8
+    }
+  }
+}
