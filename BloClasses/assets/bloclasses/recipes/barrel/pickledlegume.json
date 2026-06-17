@@ -1,0 +1,24 @@
+{
+  "code": "legume",
+  "sealHours": 336,
+  "ingredients": [
+    {
+      "type": "item",
+      "code": "game:brineportion",
+      "litres": 1,
+      "consumeLitres": 1
+    },
+    {
+      "type": "item",
+      "code": "bloclasses:legume-*",
+      "name": "legume",
+      "quantity": 1,
+      "allowedVariants": ["soybean"]
+    }
+  ],
+  "output": {
+    "type": "item",
+    "code": "bloclasses:pickledlegume-{legume}",
+    "stackSize": 1
+  }
+}

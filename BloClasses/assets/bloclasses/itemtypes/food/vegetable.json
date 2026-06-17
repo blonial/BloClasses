@@ -26,6 +26,7 @@
         "onion",
         "turnip",
         "parsnip",
+        "pumpkin",
         "cassava",
         "fennel"
       ]
@@ -68,6 +69,16 @@
           "rotation": { "x": -90, "y": 0, "z": 0 }
         }
       },
+      "*-pumpkin": {
+        "small": {
+          "translation": { "x": -0.1, "y": 0.125, "z": -0.02 },
+          "rotation": { "x": 0, "y": 78, "z": 0 }
+        },
+        "large": {
+          "translation": { "x": -0.8, "y": 0.3, "z": -0.02 },
+          "rotation": { "x": -89, "y": 0, "z": 87 }
+        }
+      },
       "*-turnip": {
         "small": {
           "translation": { "x": -0.1, "y": -0.35, "z": -0.3 },
@@ -102,6 +113,24 @@
       "inContainerTexture": { "base": "game:block/wood/barrel/raw-{type}" },
       "nutritionPropsWhenInMeal": {
         "satiety": 900,
+        "foodcategory": "vegetable"
+      },
+      "inPieProperties": {
+        "texture": "game:block/food/pie/fill-{type}",
+        "partType": "Filling",
+        "mixingCodes": ["potpie"]
+      },
+      "displayable": {
+        "shelf": {
+          "size": { "width": 4, "height": 4, "length": 4 }
+        }
+      }
+    },
+    "*-pumpkin": {
+      "foodTags": ["{type}", "tastyvegetable"],
+      "inContainerTexture": { "base": "game:block/wood/barrel/raw-{type}" },
+      "nutritionPropsWhenInMeal": {
+        "satiety": 360,
         "foodcategory": "vegetable"
       },
       "inPieProperties": {
@@ -217,10 +246,20 @@
   "creativeinventory": { "general": ["*"], "items": ["*"] },
   "nutritionPropsByType": {
     "*-cabbage": { "satiety": 600, "foodcategory": "vegetable" },
+    "*-pumpkin": { "satiety": 280, "foodcategory": "vegetable" },
     "*-fennel": { "satiety": 100, "foodcategory": "vegetable" },
     "*": { "satiety": 200, "foodcategory": "vegetable" }
   },
   "transitionablePropsByType": {
+    "*-pumpkin": [
+      {
+        "type": "Perish",
+        "freshHours": { "avg": 216 },
+        "transitionHours": { "avg": 72 },
+        "transitionedStack": { "type": "item", "code": "game:rot" },
+        "transitionRatio": 0.55
+      }
+    ],
     "*-onion": [
       {
         "type": "Perish",
@@ -244,7 +283,7 @@
         "transitionHours": { "avg": 48 },
         "transitionedStack": {
           "type": "item",
-          "code": "game:rawcassava-dried"
+          "code": "bloclasses:rawcassava-dried"
         },
         "transitionRatio": 1
       }
@@ -296,6 +335,12 @@
       "origin": { "x": 0.5, "y": 0.23, "z": 0.5 },
       "scale": 3.6
     },
+    "*-pumpkin": {
+      "translation": { "x": 2, "y": 2, "z": 0 },
+      "rotation": { "x": 127, "y": 180, "z": 38 },
+      "origin": { "x": 0.5, "y": 0.05, "z": 0.5 },
+      "scale": 3.5999
+    },
     "*-cassava": {
       "translation": { "x": 0, "y": 0, "z": 0 },
       "rotation": { "x": 134, "y": -173, "z": -8 },
@@ -334,6 +379,12 @@
       "origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
       "scale": 0.8
     },
+    "*-pumpkin": {
+      "translation": { "x": -0.8, "y": -0.2, "z": -0.59 },
+      "rotation": { "x": 84, "y": 3, "z": 4 },
+      "origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
+      "scale": 0.75
+    },
     "*-cassava": {
       "translation": { "x": -0.9, "y": -0.3, "z": -0.7 },
       "rotation": { "x": 0, "y": -21, "z": 1 },
@@ -370,6 +421,12 @@
       "rotation": { "x": 0, "y": 0, "z": 75 },
       "origin": { "x": 0.42, "y": 0.21, "z": 0.5 },
       "scale": 3.8
+    },
+    "*-pumpkin": {
+      "translation": { "x": 0, "y": 0.01, "z": 0 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
+      "origin": { "x": 0.47, "y": 0, "z": 0.5 },
+      "scale": 4.0
     },
     "*-cassava": {
       "translation": { "x": 0, "y": 0, "z": 0 },
