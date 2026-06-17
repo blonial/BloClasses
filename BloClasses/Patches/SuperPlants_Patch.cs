@@ -12,6 +12,18 @@ namespace BloClasses.Patches
     {
         public static void Postfix(ref ItemStack[] __result, IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1f)
         {
+            var charSystem = world.Api.ModLoader.GetModSystem<CharacterSystem>();
+            if (charSystem == null)
+            {
+                return;
+            }
+
+            var charClass = charSystem.characterClasses.Find(c => c.Code == byPlayer.Entity.WatchedAttributes.GetString("characterClass"));
+            if (charClass == null || !charClass.Traits.Contains("bcsuperplants"))
+            {
+                return;
+            }
+
             var extraDrops = new List<ItemStack>();
 
             foreach (var stack in __result)
