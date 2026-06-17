@@ -49,5 +49,81 @@
     "attributes": {
       "maxhealthExtraPoints": -4
     }
+  },
+  {
+    "code": "bcgreenfingered",
+    "type": "positive",
+    "attributes": {
+      "farmingCropDropRate": 0.25,
+      "farmingSeedDropRate": 0.25
+    }
+  },
+  {
+    "code": "bcgrower",
+    "type": "positive",
+    "attributes": {
+      "fruitTreeCuttingPlaceFailure": -0.2
+    }
+  },
+  {
+    "code": "bcbusy",
+    "type": "positive",
+    "attributes": {
+      "soilDestroyingTime": -0.3,
+      "plowTime": -0.3
+    }
+  },
+  {
+    "code": "bchardy",
+    "type": "positive",
+    "attributes": {
+      "maxhealthExtraPoints": 4
+    }
+  },
+  {
+    "code": "bcsuperplants",
+    "type": "positive",
+    "attributes": {}
+  },
+  {
+    "code": "bcsoilscientist",
+    "type": "positive",
+    "attributes": {}
+  },
+  {
+    "code": "bcanimallover",
+    "type": "negative",
+    "attributes": {
+      "animalLootDropRate": -0.25,
+      "animalHarvestingTime": 0.4
+    }
+  },
+  {
+    "code": "bcthesmellofcompost",
+    "type": "negative",
+    "attributes": {
+      "animalSeekingRange": 0.4
+    }
+  },
+  {
+    "code": "bcattachmenttotheland",
+    "type": "negative",
+    "attributes": {
+      "walkspeed": -0.05
+    }
+  },
+  {
+    "code": "bcnosun",
+    "type": "negative",
+    "attributes": {
+      "undergroundSanityLossMod": 0.3
+    }
+  },
+  {
+    "code": "bcbumpkin",
+    "type": "negative",
+    "attributes": {
+      "armorDurabilityLoss": 0.2
+    }
   }
 ]
