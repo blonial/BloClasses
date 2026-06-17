@@ -30,7 +30,9 @@ namespace BloClasses.Patches
             {
                 if (stack.Collectible.Code.ToString().Contains("game:seeds"))
                 {
-                    if (world.Rand.NextDouble() == 0.01)
+                    var val = world.Rand.NextDouble();
+                    
+                    if (world.Rand.NextDouble() <= 0.03)
                     {
                         extraDrops.Add(
                             new ItemStack(

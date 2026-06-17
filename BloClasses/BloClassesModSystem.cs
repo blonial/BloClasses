@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using BloClasses.EntityBehaviors;
+using HarmonyLib;
 using RPClasses.BlockEntities;
 using RPClasses.Blocks;
 using Vintagestory.API.Client;
@@ -14,7 +15,10 @@ namespace BloClasses
         public override void Start(ICoreAPI api)
         {
             api.RegisterBlockClass("CustomBlockCookingContainer", typeof(CustomBlockCookingContainer));
+
             api.RegisterBlockEntityClass("CustomBlockEntityFirepit", typeof(CustomBlockEntityFirepit));
+
+            api.RegisterEntityBehaviorClass("UndergroundStabilityLossModEntityBehavior", typeof(UndergroundStabilityLossModEntityBehavior));
         }
 
         public override void StartClientSide(ICoreClientAPI api)

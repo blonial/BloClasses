@@ -116,7 +116,7 @@
     "code": "bcnosun",
     "type": "negative",
     "attributes": {
-      "undergroundSanityLossMod": 0.3
+      "undergroundStabilityLossMod": 0.3
     }
   },
   {
