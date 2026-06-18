@@ -65,11 +65,15 @@
     "gear": [
       {
         "type": "item",
-        "code": "game:clothes-head-broadbrim"
+        "code": "game:clothes-head-straw-hat"
       },
       {
         "type": "item",
         "code": "game:clothes-upperbody-peasent-shirt"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-nadiya-upperbodyover-coat-verylong"
       },
       {
         "type": "item",
@@ -78,6 +82,10 @@
       {
         "type": "item",
         "code": "game:clothes-foot-farmhand"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-waist-ruralfarmer"
       }
     ]
   },
@@ -94,7 +102,36 @@
       "bcbighands",
       "bcfatty"
     ],
-    "gear": []
+    "gear": [
+      {
+        "type": "item",
+        "code": "game:clothes-head-furbrim"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-shoulder-jord-robe"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-nadiya-upperbody-innkeeper"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-lowerbody-hosewhiteorange"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-neck-bronze-gem-necklace"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-arm-japamala"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-nadiya-waist-fisher"
+      }
+    ]
   },
   {
     "enabled": true,
@@ -109,7 +146,40 @@
       "bchardhanded",
       "bcpickaxesupremacy"
     ],
-    "gear": []
+    "gear": [
+      {
+        "type": "item",
+        "code": "game:clothes-head-jailors-hat"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-head-jailors-hat"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-nadiya-upperbody-tailor"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-lowerbody-workmans-gown"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-foot-hobnailboots"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-face-glasses"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-arm-flint"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-nadiya-hand-miner-clean"
+      }
+    ]
   },
   {
     "enabled": true,
@@ -126,13 +196,44 @@
       "bcweakling",
       "bcwanderer"
     ],
-    "gear": []
+    "gear": [
+      { "type": "item", "code": "game:clothes-head-messengers-hat" },
+      {
+        "type": "item",
+        "code": "game:clothes-upperbody-malefactor-shirt"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-upperbodyover-malefactor-tunic"
+      },
+      { "type": "item", "code": "game:clothes-shoulder-malefactor-cloak" },
+      {
+        "type": "item",
+        "code": "game:clothes-lowerbody-malefactor-trousers"
+      },
+      { "type": "item", "code": "game:clothes-foot-malefactor-boots" },
+      { "type": "item", "code": "game:clothes-neck-malefactor-pendant" },
+      { "type": "item", "code": "game:clothes-hand-malefactor-gloves" },
+      { "type": "item", "code": "game:clothes-waist-malefactor-sash" }
+    ]
   },
   {
     "enabled": true,
     "code": "bctailor",
     "traits": ["bcclothier", "bcmender", "bccivil", "bcweak", "bckind"],
-    "gear": []
+    "gear": [
+      { "type": "item", "code": "game:clothes-face-tailor-mask" },
+      {
+        "type": "item",
+        "code": "game:clothes-upperbodyover-tailor-jacket"
+      },
+      { "type": "item", "code": "game:clothes-upperbody-tailor-blouse" },
+      { "type": "item", "code": "game:clothes-waist-tailor-belt" },
+      { "type": "item", "code": "game:clothes-lowerbody-tailor-trousers" },
+      { "type": "item", "code": "game:clothes-hand-tailor-gloves" },
+      { "type": "item", "code": "game:clothes-foot-tailor-shoes" },
+      { "type": "item", "code": "game:clothes-arm-tailor-needlepuff" }
+    ]
   },
   {
     "enabled": true,
@@ -145,7 +246,19 @@
       "bcnearsighted",
       "bcheavyhanded"
     ],
-    "gear": []
+    "gear": [
+      {
+        "type": "item",
+        "code": "game:clothes-upperbody-blackguard-shirt"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-lowerbody-blackguard-leggings"
+      },
+      { "type": "item", "code": "game:clothes-foot-blackguard-shoes" },
+      { "type": "item", "code": "game:clothes-emblem-blackguard-pin" },
+      { "type": "item", "code": "game:clothes-waist-blackguard-belt" }
+    ]
   },
   {
     "enabled": true,
@@ -164,6 +277,26 @@
       "bcprimitive",
       "bcheavyfooted"
     ],
-    "gear": []
+    "gear": [
+      { "type": "item", "code": "game:clothes-shoulder-clockmaker-apron" },
+      {
+        "type": "item",
+        "code": "game:clothes-upperbody-clockmaker-shirt"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-upperbodyover-clockmaker-tunic"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-lowerbody-clockmaker-pants"
+      },
+      { "type": "item", "code": "game:clothes-foot-clockmaker-shoes" },
+      {
+        "type": "item",
+        "code": "game:clothes-hand-clockmaker-wristguard"
+      },
+      { "type": "item", "code": "game:clothes-waist-clockmaker-belt" }
+    ]
   }
 ]
