@@ -1,8 +1,8 @@
-﻿using RPClasses.Blocks;
+﻿using BloClasses.Blocks;
 using Vintagestory.API.Common;
 using Vintagestory.GameContent;
 
-namespace RPClasses.BlockEntities
+namespace BloClasses.BlockEntities
 {
     public class CustomBlockEntityFirepit : BlockEntityFirepit
     {

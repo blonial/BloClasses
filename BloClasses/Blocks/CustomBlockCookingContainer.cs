@@ -1,10 +1,10 @@
-﻿using RPClasses.Extensions;
+﻿using BloClasses.Extensions;
 using System.Linq;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.GameContent;
 
-namespace RPClasses.Blocks
+namespace BloClasses.Blocks
 {
     public class CustomBlockCookingContainer : BlockCookingContainer
     {

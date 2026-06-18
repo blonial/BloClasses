@@ -1,9 +1,9 @@
 using HarmonyLib;
-using RPClasses.Blocks;
+using BloClasses.Blocks;
 using Vintagestory.API.Common;
 using Vintagestory.GameContent;
 
-namespace RPClasses.Patches
+namespace BloClasses.Patches
 {
     [HarmonyPatch(typeof(InventorySmelting), nameof(InventorySmelting.GetOutputText))]
     public static class InventorySmelting_GetOutputText_Patch

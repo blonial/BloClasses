@@ -1,4 +1,4 @@
-﻿namespace RPClasses.RegistrySystems
+﻿namespace BloClasses.RegistrySystems
 {
     public class CookingRecipeRequiresTrait
     {

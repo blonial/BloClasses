@@ -1,7 +1,7 @@
 ﻿using BloClasses.EntityBehaviors;
 using HarmonyLib;
-using RPClasses.BlockEntities;
-using RPClasses.Blocks;
+using BloClasses.BlockEntities;
+using BloClasses.Blocks;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 

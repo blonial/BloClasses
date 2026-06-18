@@ -1,9 +1,9 @@
-﻿using RPClasses.RecipeRegistrySystems;
-using RPClasses.RegistrySystems;
+﻿using BloClasses.RecipeRegistrySystems;
+using BloClasses.RegistrySystems;
 using System.Collections.Generic;
 using Vintagestory.API.Common;
 
-namespace RPClasses.Extensions
+namespace BloClasses.Extensions
 {
     public static class ApiExtension
     {

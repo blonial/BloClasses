@@ -1,6 +1,6 @@
 ﻿using ProtoBuf;
 
-namespace RPClasses.Networking
+namespace BloClasses.Networking
 {
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class CookingRecipesTraitsRequirementsPacket
