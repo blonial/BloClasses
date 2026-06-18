@@ -412,6 +412,7 @@
   "game:charattribute-forageDropRate--0.15": "-15% zbiorów z żerowania",
   "game:charattribute-temporalGearTLRepairCost--1": "-1 koło zębate do naprawy translokatora",
   "game:charattribute-toolDurability-0.1": "+10% wytrzymałości narzędzi",
+  "bloclasses:toolhead-quality-high": "Wysokiej jakości",
   "game:charattribute-doubleCharcoalChance-0.2": "+20% szans na podwójny węgiel drzewny",
   "game:charattribute-hammerDurabilityPreservationChance-0.2": "+20% szans zachowania wytrzymałości młota",
   "game:charattribute-fireDamageMod--0.5": "-50% obrażeń od ognia",

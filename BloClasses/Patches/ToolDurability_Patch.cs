@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Linq;
+using System.Text;
 using HarmonyLib;
 using Vintagestory.API.Common;
+using Vintagestory.API.Config;
 using Vintagestory.GameContent;
 
 namespace BloClasses.Patches
@@ -178,6 +180,21 @@ namespace BloClasses.Patches
                 }
 
                 __result = Math.Max(1, (int)MathF.Round(__result * modifier));
+            }
+        }
+
+        [HarmonyPatch(typeof(CollectibleObject), nameof(CollectibleObject.GetHeldItemInfo), typeof(ItemSlot), typeof(StringBuilder), typeof(IWorldAccessor), typeof(bool))]
+        public static class ToolHeadInfoPatch
+        {
+            public static void Postfix(ItemSlot inSlot, StringBuilder dsc)
+            {
+                ItemStack? itemStack = inSlot?.Itemstack;
+                if (itemStack == null || !IsToolHead(itemStack) || !itemStack.Attributes.HasAttribute(ToolDurabilityMultiplierAttribute))
+                {
+                    return;
+                }
+
+                dsc.AppendLine(Lang.Get("bloclasses:toolhead-quality-high"));
             }
         }
 
