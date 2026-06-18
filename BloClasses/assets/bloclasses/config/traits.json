@@ -288,7 +288,8 @@
     "type": "positive",
     "attributes": {
       "vesselContentsDropRate": 0.1,
-      "wholeVesselLootChance": 0.2
+      "wholeVesselLootChance": 0.2,
+      "rustyGearDropRate": 0.1
     }
   },
   {

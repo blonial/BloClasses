@@ -1,0 +1,20 @@
+{
+  "ingredientPattern": "LSL\t_L_",
+  "requiresTrait": "bcpathfinder",
+  "ingredients": {
+    "S": { "type": "block", "code": "game:soil-*" },
+    "L": {
+      "type": "item",
+      "code": "game:stone-*",
+      "name": "rock",
+      "quantity": 1
+    }
+  },
+  "width": 3,
+  "height": 2,
+  "output": {
+    "type": "block",
+    "code": "game:stonepathslab-free",
+    "quantity": 2
+  }
+}

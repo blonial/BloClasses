@@ -1,0 +1,37 @@
+{
+  "ingredientPattern": "LLL\tLCL\tLCL",
+  "requiresTrait": "bcpathfinder",
+  "ingredients": {
+    "C": { "type": "item", "code": "game:mortar" },
+    "L": {
+      "type": "item",
+      "code": "game:stonebrick-*",
+      "name": "rock",
+      "allowedVariants": [
+        "andesite",
+        "chalk",
+        "chert",
+        "conglomerate",
+        "limestone",
+        "claystone",
+        "granite",
+        "basalt",
+        "peridotite",
+        "phyllite",
+        "sandstone",
+        "shale",
+        "slate",
+        "bauxite",
+        "suevite",
+        "travertine"
+      ]
+    }
+  },
+  "width": 3,
+  "height": 3,
+  "output": {
+    "type": "block",
+    "code": "game:stonebricks-{rock}",
+    "quantity": 3
+  }
+}

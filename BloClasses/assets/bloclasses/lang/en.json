@@ -411,6 +411,8 @@
   "game:charattribute-temporalGearTLRepairCost--1": "-1 temporal gear translocator repair cost",
   "game:charattribute-toolDurability-0.1": "+10% tool durability",
   "bloclasses:toolhead-quality-high": "High quality",
+  "bloclasses:item-sturdy-clothier-backpack": "Sturdy clothier backpack",
+  "bloclasses:item-clothier-backpack": "Clothier backpack",
   "game:charattribute-doubleCharcoalChance-0.2": "+20% double charcoal chance",
   "game:charattribute-hammerDurabilityPreservationChance-0.2": "+20% hammer durability preservation chance",
   "game:charattribute-fireDamageMod--0.5": "-50% fire damage",

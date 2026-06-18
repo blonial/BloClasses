@@ -1,0 +1,12 @@
+{
+  "ingredientPattern": "_S_\tTLT",
+  "requiresTrait": "bcclothier",
+  "ingredients": {
+    "T": { "type": "item", "code": "game:flaxtwine" },
+    "L": { "type": "item", "code": "game:linensack" },
+    "S": { "type": "item", "code": "game:backpack-sturdy" }
+  },
+  "width": 3,
+  "height": 2,
+  "output": { "type": "item", "code": "bloclasses:sturdy-clothier-backpack" }
+}
