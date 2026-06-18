@@ -116,6 +116,30 @@ namespace BloClasses.Patches
             }
         }
 
+        [HarmonyPatch]
+        public static class CraftingOutputPreviewPatch
+        {
+            public static MethodBase? TargetMethod()
+            {
+                Type inventoryCraftingGridType = AccessTools.TypeByName("Vintagestory.Common.InventoryCraftingGrid");
+                return inventoryCraftingGridType == null
+                    ? null
+                    : AccessTools.Method(inventoryCraftingGridType, "FoundMatch", new[] { typeof(GridRecipe) });
+            }
+
+            public static void Postfix(object __instance)
+            {
+                object? outputSlot = Traverse.Create(__instance).Field("outputSlot").GetValue();
+                if (outputSlot == null)
+                {
+                    return;
+                }
+
+                ItemStack? itemStack = Traverse.Create(outputSlot).Property<ItemStack>("Itemstack").Value;
+                ApplyCopiedToolHeadDurability(itemStack, outputSlot);
+            }
+        }
+
         public static void ApplyForgedToolHeadDurability(ItemStack workItemStack, IPlayer player)
         {
             if (player?.Entity == null || !IsToolHead(workItemStack))
@@ -143,6 +167,7 @@ namespace BloClasses.Patches
             float outputModifier = itemStack.Attributes.GetFloat(ToolDurabilityMultiplierAttribute, 1f);
             float inputModifier = GetBestToolHeadDurabilityModifier(craftingOutputSlot);
             float modifier = inputModifier != 1f ? inputModifier : outputModifier;
+            float currentMaxModifier = itemStack.Attributes.GetFloat(ToolDurabilityMaxMultiplierAttribute, 1f);
 
             if (IsToolHead(itemStack) && inputModifier != 1f)
             {
@@ -156,6 +181,11 @@ namespace BloClasses.Patches
             }
 
             if (modifier <= 0 || modifier == 1)
+            {
+                return;
+            }
+
+            if (currentMaxModifier == modifier)
             {
                 return;
             }
