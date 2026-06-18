@@ -1,17 +1,20 @@
-﻿using HarmonyLib;
 using System.Linq;
+using HarmonyLib;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
 
 namespace BloClasses.Patches
 {
-    [HarmonyPatch(typeof(BlockCrop), "GetDrops")]
+    [HarmonyPatch(typeof(BlockCrop), nameof(BlockCrop.GetDrops))]
     public static class FarmingCropDropRate_Patch
     {
         public static void Postfix(ref ItemStack[] __result, IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1f)
         {
-            if (byPlayer?.Entity == null || __result == null || pos == null) return;
+            if (byPlayer?.Entity == null || __result == null || pos == null)
+            {
+                return;
+            }
 
             var cropBonusAttribute = byPlayer.Entity.Stats.Where(s => s.Key == "farmingCropDropRate");
             if (!cropBonusAttribute.Any())
@@ -19,7 +22,7 @@ namespace BloClasses.Patches
                 return;
             }
 
-            if (!(world.BlockAccessor.GetBlockEntity(pos.DownCopy()) is BlockEntityFarmland))
+            if (world.BlockAccessor.GetBlockEntity(pos.DownCopy()) is not BlockEntityFarmland)
             {
                 return;
             }

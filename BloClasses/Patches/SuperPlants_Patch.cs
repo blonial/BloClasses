@@ -1,13 +1,13 @@
-﻿using HarmonyLib;
 using System.Collections.Generic;
 using System.Linq;
+using HarmonyLib;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
 
 namespace BloClasses.Patches
 {
-    [HarmonyPatch(typeof(BlockCrop), "GetDrops")]
+    [HarmonyPatch(typeof(BlockCrop), nameof(BlockCrop.GetDrops))]
     public static class SuperPlants_Patch
     {
         public static void Postfix(ref ItemStack[] __result, IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1f)
@@ -31,7 +31,7 @@ namespace BloClasses.Patches
                 if (stack.Collectible.Code.ToString().Contains("game:seeds"))
                 {
                     var val = world.Rand.NextDouble();
-                    
+
                     if (world.Rand.NextDouble() <= 0.03)
                     {
                         extraDrops.Add(

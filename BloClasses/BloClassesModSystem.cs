@@ -10,7 +10,7 @@ namespace BloClasses
     public class BloClassesModSystem : ModSystem
     {
 
-        private Harmony? Patcher;
+        private static Harmony? Patcher;
 
         public override void Start(ICoreAPI api)
         {
@@ -19,10 +19,7 @@ namespace BloClasses
             api.RegisterBlockEntityClass("CustomBlockEntityFirepit", typeof(CustomBlockEntityFirepit));
 
             api.RegisterEntityBehaviorClass("UndergroundStabilityLossModEntityBehavior", typeof(UndergroundStabilityLossModEntityBehavior));
-        }
 
-        public override void StartClientSide(ICoreClientAPI api)
-        {
             if (Patcher == null)
             {
                 Patcher = new Harmony(Mod.Info.ModID);
