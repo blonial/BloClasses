@@ -77,7 +77,8 @@
     "code": "bchardy",
     "type": "positive",
     "attributes": {
-      "maxhealthExtraPoints": 4
+      "miningSpeedMul": 0.1,
+      "maxhealthExtraPoints": 5
     }
   },
   {
@@ -124,6 +125,351 @@
     "type": "negative",
     "attributes": {
       "armorDurabilityLoss": 0.2
+    }
+  },
+  {
+    "code": "bcrough",
+    "type": "positive",
+    "attributes": {
+      "maxhealthExtraPoints": 4
+    }
+  },
+  {
+    "code": "bctough",
+    "type": "positive",
+    "attributes": {
+      "maxhealthExtraPoints": 2.5
+    }
+  },
+  {
+    "code": "bcwildfood",
+    "type": "positive",
+    "attributes": {}
+  },
+  {
+    "code": "bcgoodcook",
+    "type": "positive",
+    "attributes": {
+      "cookedFoodSaturation": 0.15,
+      "cookedFoodPerishTime": -0.1
+    }
+  },
+  {
+    "code": "bcbigbox",
+    "type": "positive",
+    "attributes": {}
+  },
+  {
+    "code": "bcbutcher",
+    "type": "positive",
+    "attributes": {
+      "animalLootDropRate": 0.25
+    }
+  },
+  {
+    "code": "bccryingliver",
+    "type": "negative",
+    "attributes": {
+      "attackSpeed": -0.1
+    }
+  },
+  {
+    "code": "bchungry",
+    "type": "negative",
+    "attributes": {
+      "hungerrate": 0.25
+    }
+  },
+  {
+    "code": "bcbighands",
+    "type": "negative",
+    "attributes": {
+      "farmingCropDropRate": -0.25,
+      "wildCropDropRate": -0.25
+    }
+  },
+  {
+    "code": "bcfatty",
+    "type": "negative",
+    "attributes": {
+      "armorWalkSpeedAffectedness": 0.15
+    }
+  },
+  {
+    "code": "bcquarrier",
+    "type": "positive",
+    "attributes": {
+      "miningSpeedMul": 0.3,
+      "oreDropRate": 0.25,
+      "stoneDrop": 0.2,
+      "pickaxeDurabilityPreservationChance": 0.2
+    }
+  },
+  {
+    "code": "bccaveman",
+    "type": "positive",
+    "attributes": {
+      "undergroundStabilityLossMod": -0.25
+    }
+  },
+  {
+    "code": "bcstronghands",
+    "type": "positive",
+    "attributes": {
+      "meleeWeaponsDamage": 0.1
+    }
+  },
+  {
+    "code": "bcheavy",
+    "type": "negative",
+    "attributes": {
+      "walkspeed": -0.1
+    }
+  },
+  {
+    "code": "bcshakyhands",
+    "type": "negative",
+    "attributes": {
+      "rangedWeaponsDamage": -0.4,
+      "rangedWeaponsAcc": -0.4,
+      "bowDrawingStrength": -0.4
+    }
+  },
+  {
+    "code": "bchardhanded",
+    "type": "negative",
+    "attributes": {
+      "farmingCropDropRate": -0.2,
+      "wildCropDropRate": -0.2,
+      "animalLootDropRate": -0.2,
+      "animalHarvestingTime": -0.2
+    }
+  },
+  {
+    "code": "bcpickaxesupremacy",
+    "type": "negative",
+    "attributes": {
+      "treeCuttingSpeed": -0.25
+    }
+  },
+  {
+    "code": "bcscout",
+    "type": "positive",
+    "attributes": {
+      "walkspeed": 0.15,
+      "forageDropRate": 0.3,
+      "wildCropDropRate": 0.2
+    }
+  },
+  {
+    "code": "bccamouflage",
+    "type": "positive",
+    "attributes": {
+      "animalSeekingRange": -0.2
+    }
+  },
+  {
+    "code": "bcgoodmetabolism",
+    "type": "positive",
+    "attributes": {
+      "hungerrate": -0.1
+    }
+  },
+  {
+    "code": "bcgoldfever",
+    "type": "positive",
+    "attributes": {
+      "panningSpeed": 0.5,
+      "panningDrop": 0.5
+    }
+  },
+  {
+    "code": "bcarchaeologist",
+    "type": "positive",
+    "attributes": {
+      "vesselContentsDropRate": 0.1,
+      "wholeVesselLootChance": 0.2
+    }
+  },
+  {
+    "code": "bcpathfinder",
+    "type": "positive",
+    "attributes": {}
+  },
+  {
+    "code": "bclight",
+    "type": "positive",
+    "attributes": {
+      "fallDamageMul": -0.25
+    }
+  },
+  {
+    "code": "bcpacifist",
+    "type": "negative",
+    "attributes": {
+      "meleeWeaponsDamage": -0.1,
+      "rangedWeaponsDamage": -0.1
+    }
+  },
+  {
+    "code": "bcweakling",
+    "type": "negative",
+    "attributes": {
+      "maxhealthExtraPoints": -6
+    }
+  },
+  {
+    "code": "bcwanderer",
+    "type": "negative",
+    "attributes": {
+      "undergroundStabilityLossMod": 0.2
+    }
+  },
+  {
+    "code": "bcclothier",
+    "type": "positive",
+    "attributes": {}
+  },
+  {
+    "code": "bcmender",
+    "type": "positive",
+    "attributes": {
+      "armorDurabilityLoss": -0.25
+    }
+  },
+  {
+    "code": "bccivil",
+    "type": "positive",
+    "attributes": {
+      "forageDropRate": -0.1
+    }
+  },
+  {
+    "code": "bcweak",
+    "type": "negative",
+    "attributes": {
+      "maxhealthExtraPoints": -2,
+      "miningSpeedMul": -0.1
+    }
+  },
+  {
+    "code": "bckind",
+    "type": "negative",
+    "attributes": {
+      "animalLootDropRate": -0.1,
+      "animalHarvestingTime": 0.25
+    }
+  },
+  {
+    "code": "bcsoldier",
+    "type": "positive",
+    "attributes": {
+      "meleeWeaponsDamage": 0.3,
+      "armorDurabilityLoss": -0.15,
+      "armorWalkSpeedAffectedness": -0.25
+    }
+  },
+  {
+    "code": "bcmerciless",
+    "type": "positive",
+    "attributes": {}
+  },
+  {
+    "code": "bcravenous",
+    "type": "negative",
+    "attributes": {
+      "hungerrate": 0.35
+    }
+  },
+  {
+    "code": "bcnearsighted",
+    "type": "negative",
+    "attributes": {
+      "rangedWeaponsDamage": -0.25
+    }
+  },
+  {
+    "code": "bcheavyhanded",
+    "type": "negative",
+    "attributes": {
+      "vesselContentsDropRate": -0.1,
+      "forageDropRate": -0.15,
+      "wildCropDropRate": -0.2
+    }
+  },
+  {
+    "code": "bctechnical",
+    "type": "positive",
+    "attributes": {
+      "temporalGearTLRepairCost": -1
+    }
+  },
+  {
+    "code": "bcmetallurgist",
+    "type": "positive",
+    "attributes": {}
+  },
+  {
+    "code": "bctinkerer",
+    "type": "positive",
+    "attributes": {}
+  },
+  {
+    "code": "bcdurablealloys",
+    "type": "positive",
+    "attributes": {
+      "toolDurability": 0.1
+    }
+  },
+  {
+    "code": "bcmielarzgod",
+    "type": "positive",
+    "attributes": {
+      "doubleCharcoalChance": 0.2
+    }
+  },
+  {
+    "code": "bcprofessioninhand",
+    "type": "positive",
+    "attributes": {
+      "hammerDurabilityPreservationChance": 0.2
+    }
+  },
+  {
+    "code": "bcfireproof",
+    "type": "positive",
+    "attributes": {
+      "fireDamageMod": -0.5,
+      "freezeResistance": 2
+    }
+  },
+  {
+    "code": "bcaquaphobic",
+    "type": "negative",
+    "attributes": {
+      "swimmingSpeed": -0.25
+    }
+  },
+  {
+    "code": "bcglutton",
+    "type": "negative",
+    "attributes": {
+      "hungerrate": 0.15
+    }
+  },
+  {
+    "code": "bcprimitive",
+    "type": "negative",
+    "attributes": {
+      "mechanicalsDamage": -0.25
+    }
+  },
+  {
+    "code": "bcheavyfooted",
+    "type": "negative",
+    "attributes": {
+      "animalSeekingRange": 0.25,
+      "sneakSpeed": -0.25
     }
   }
 ]

@@ -53,7 +53,7 @@
       "bcgreenfingered",
       "bcgrower",
       "bcbusy",
-      "bchardy",
+      "bcrough",
       "bcsuperplants",
       "bcsoilscientist",
       "bcanimallover",
@@ -80,5 +80,90 @@
         "code": "game:clothes-foot-farmhand"
       }
     ]
+  },
+  {
+    "enabled": true,
+    "code": "bcinnkeeper",
+    "traits": [
+      "bcwildfood",
+      "bcgoodcook",
+      "bcbigbox",
+      "bcbutcher",
+      "bccryingliver",
+      "bchungry",
+      "bcbighands",
+      "bcfatty"
+    ],
+    "gear": []
+  },
+  {
+    "enabled": true,
+    "code": "bcminer",
+    "traits": [
+      "bcquarrier",
+      "bccaveman",
+      "bctough",
+      "bcstronghands",
+      "bcheavy",
+      "bcshakyhands",
+      "bchardhanded",
+      "bcpickaxesupremacy"
+    ],
+    "gear": []
+  },
+  {
+    "enabled": true,
+    "code": "bctraveler",
+    "traits": [
+      "bcscout",
+      "bccamouflage",
+      "bcgoodmetabolism",
+      "bcgoldfever",
+      "bcarchaeologist",
+      "bcpathfinder",
+      "bclight",
+      "bcpacifist",
+      "bcweakling",
+      "bcwanderer"
+    ],
+    "gear": []
+  },
+  {
+    "enabled": true,
+    "code": "bctailor",
+    "traits": ["bcclothier", "bcmender", "bccivil", "bcweak", "bckind"],
+    "gear": []
+  },
+  {
+    "enabled": true,
+    "code": "bcknight",
+    "traits": [
+      "bcsoldier",
+      "bchardy",
+      "bcmerciless",
+      "bcravenous",
+      "bcnearsighted",
+      "bcheavyhanded"
+    ],
+    "gear": []
+  },
+  {
+    "enabled": true,
+    "code": "bcblacksmith",
+    "traits": [
+      "bctechnical",
+      "bcmetallurgist",
+      "bctinkerer",
+      "bcdurablealloys",
+      "bcmielarzgod",
+      "bcprofessioninhand",
+      "bcfireproof",
+      "bcheavy",
+      "bcaquaphobic",
+      "bcglutton",
+      "bcprimitive",
+      "bcheavyfooted"
+    ],
+    "gear": []
   }
 ]
