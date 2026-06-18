@@ -12,6 +12,7 @@ namespace BloClasses.Patches
     public static class ToolDurability_Patch
     {
         private const string ToolDurabilityMultiplierAttribute = "bloclassesToolDurabilityMul";
+        private const string ToolDurabilityMaxMultiplierAttribute = "bloclassesToolDurabilityMaxMul";
 
         [ThreadStatic]
         private static IPlayer? CurrentAnvilPlayer;
@@ -161,7 +162,23 @@ namespace BloClasses.Patches
             int boostedDurability = Math.Max(1, (int)MathF.Round(remainingDurability * modifier));
 
             itemStack.Attributes.SetInt("durability", boostedDurability);
+            itemStack.Attributes.SetFloat(ToolDurabilityMaxMultiplierAttribute, modifier);
             itemStack.Attributes.RemoveAttribute(ToolDurabilityMultiplierAttribute);
+        }
+
+        [HarmonyPatch(typeof(CollectibleObject), nameof(CollectibleObject.GetMaxDurability), typeof(ItemStack))]
+        public static class MaxToolDurabilityPatch
+        {
+            public static void Postfix(ItemStack itemstack, ref int __result)
+            {
+                float modifier = itemstack?.Attributes.GetFloat(ToolDurabilityMaxMultiplierAttribute, 1f) ?? 1f;
+                if (modifier <= 0 || modifier == 1f)
+                {
+                    return;
+                }
+
+                __result = Math.Max(1, (int)MathF.Round(__result * modifier));
+            }
         }
 
         private static float GetBestToolHeadDurabilityModifier(object craftingOutputSlot)

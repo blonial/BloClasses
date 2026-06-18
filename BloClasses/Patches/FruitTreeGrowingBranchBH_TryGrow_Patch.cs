@@ -1,10 +1,8 @@
 using System.Collections.Generic;
 using System.Reflection;
 using System.Reflection.Emit;
-using System.Text;
+using BloClasses.BlockEntities;
 using HarmonyLib;
-using Vintagestory.API.Common;
-using Vintagestory.API.Config;
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
 
@@ -35,44 +33,16 @@ namespace BloClasses.Patches
             }
         }
 
-        [HarmonyPostfix]
-        [HarmonyPatch("GetBlockInfo")]
-        public static void GetBlockInfoPostfix(FruitTreeGrowingBranchBH __instance, IPlayer forPlayer, StringBuilder dsc)
-        {
-            float modifier = GetFruitTreeCuttingPlaceFailure(__instance);
-
-            if (modifier == 0)
-            {
-                return;
-            }
-
-            dsc.AppendLine(Lang.Get(
-                "bloclasses:fruittreecutting-survivalchance-modifier",
-                FormatSignedPercent(-modifier)
-            ));
-        }
-
         public static float ApplyFruitTreeCuttingPlaceFailure(float chance, FruitTreeGrowingBranchBH behavior)
         {
             float modifier = GetFruitTreeCuttingPlaceFailure(behavior);
-
-            if (modifier == 0)
-            {
-                return chance;
-            }
-
-            return GameMath.Clamp(chance - modifier, 0, 1);
+            return modifier == 0 ? chance : GameMath.Clamp(chance - modifier, 0, 1);
         }
 
         private static float GetFruitTreeCuttingPlaceFailure(FruitTreeGrowingBranchBH behavior)
         {
-            var be = OwnBeGetter?.Invoke(behavior, null) as BlockEntityFruitTreeBranch;
-            return be == null ? 0 : FruitTreeCuttingPlacementStorage.Get(be)?.PlaceFailure ?? 0;
-        }
-
-        private static string FormatSignedPercent(float value)
-        {
-            return $"{100f * value:+0.#;-0.#;0}%";
+            var be = OwnBeGetter?.Invoke(behavior, null) as CustomBlockEntityFruitTreeBranch;
+            return be?.FruitTreeCuttingPlaceFailure ?? 0;
         }
     }
 }

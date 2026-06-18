@@ -1,0 +1,8 @@
+[
+  {
+    "op": "replace",
+    "path": "/entityClass",
+    "value": "CustomBlockEntityFruitTreeBranch",
+    "file": "game:blocktypes/plant/fruittreebranch.json"
+  }
+]

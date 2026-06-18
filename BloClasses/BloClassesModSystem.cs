@@ -17,6 +17,7 @@ namespace BloClasses
             api.RegisterBlockClass("CustomBlockCookingContainer", typeof(CustomBlockCookingContainer));
 
             api.RegisterBlockEntityClass("CustomBlockEntityFirepit", typeof(CustomBlockEntityFirepit));
+            api.RegisterBlockEntityClass("CustomBlockEntityFruitTreeBranch", typeof(CustomBlockEntityFruitTreeBranch));
 
             api.RegisterEntityBehaviorClass("UndergroundStabilityLossModEntityBehavior", typeof(UndergroundStabilityLossModEntityBehavior));
 
@@ -30,6 +31,7 @@ namespace BloClasses
         public override void Dispose()
         {
             Patcher?.UnpatchAll(Mod.Info.ModID);
+            Patcher = null;
         }
     }
 }

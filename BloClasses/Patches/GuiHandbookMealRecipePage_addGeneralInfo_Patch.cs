@@ -24,10 +24,6 @@ namespace BloClasses.Patches
                 return;
             }
 
-            capi.Logger.Notification(
-                new System.Diagnostics.StackTrace().ToString()
-            );
-
             components.AddRange(VtmlUtil.Richtextify(
                 capi,
                 Lang.Get("game:gridrecipe-requirestrait", Lang.Get($"BloClasses:traitname-{requiresTrait.RequiresTrait}")) + "\n",

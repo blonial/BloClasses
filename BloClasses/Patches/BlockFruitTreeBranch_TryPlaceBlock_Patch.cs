@@ -1,7 +1,7 @@
-using System.Runtime.CompilerServices;
+using BloClasses.BlockEntities;
 using HarmonyLib;
 using Vintagestory.API.Common;
-using Vintagestory.API.Datastructures;
+using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
 
 namespace BloClasses.Patches
@@ -9,54 +9,6 @@ namespace BloClasses.Patches
     internal static class FruitTreeCuttingAttributeNames
     {
         public const string PlaceFailure = "fruitTreeCuttingPlaceFailure";
-    }
-
-    internal sealed class FruitTreeCuttingPlacementData
-    {
-        public float PlaceFailure { get; set; }
-    }
-
-    internal static class FruitTreeCuttingPlacementStorage
-    {
-        private static readonly ConditionalWeakTable<BlockEntityFruitTreeBranch, FruitTreeCuttingPlacementData> DataByBranch = new ConditionalWeakTable<BlockEntityFruitTreeBranch, FruitTreeCuttingPlacementData>();
-
-        public static void Set(BlockEntityFruitTreeBranch branch, float placeFailure)
-        {
-            FruitTreeCuttingPlacementData data = DataByBranch.GetOrCreateValue(branch);
-            data.PlaceFailure = placeFailure;
-        }
-
-        public static FruitTreeCuttingPlacementData? Get(BlockEntityFruitTreeBranch branch)
-        {
-            return DataByBranch.TryGetValue(branch, out FruitTreeCuttingPlacementData? data) ? data : null;
-        }
-
-        public static void FromTreeAttributes(BlockEntityFruitTreeBranch branch, ITreeAttribute tree)
-        {
-            float placeFailure = tree.GetFloat(FruitTreeCuttingAttributeNames.PlaceFailure, 0);
-
-            if (placeFailure == 0)
-            {
-                return;
-            }
-
-            FruitTreeCuttingPlacementData data = DataByBranch.GetOrCreateValue(branch);
-            data.PlaceFailure = placeFailure;
-        }
-
-        public static void ToTreeAttributes(BlockEntityFruitTreeBranch branch, ITreeAttribute tree)
-        {
-            FruitTreeCuttingPlacementData? data = Get(branch);
-            if (data == null)
-            {
-                return;
-            }
-
-            if (data.PlaceFailure != 0)
-            {
-                tree.SetFloat(FruitTreeCuttingAttributeNames.PlaceFailure, data.PlaceFailure);
-            }
-        }
     }
 
     [HarmonyPatch(typeof(BlockFruitTreeBranch))]
@@ -71,35 +23,26 @@ namespace BloClasses.Patches
                 return;
             }
 
-            var be = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BlockEntityFruitTreeBranch;
+            CustomBlockEntityFruitTreeBranch? be = GetPlacedBranchEntity(world, blockSel);
             if (be == null)
             {
                 return;
             }
 
             float blendedModifier = byPlayer.Entity.Stats.GetBlended(FruitTreeCuttingAttributeNames.PlaceFailure);
-            float modifier = blendedModifier == 1 ? 0 : blendedModifier - 1;
-            FruitTreeCuttingPlacementStorage.Set(be, modifier);
-
+            be.FruitTreeCuttingPlaceFailure = blendedModifier == 1 ? 0 : blendedModifier - 1;
             be.MarkDirty();
         }
-    }
 
-    [HarmonyPatch(typeof(BlockEntityFruitTreeBranch))]
-    public static class FruitTreeBranchBlockEntityPatches
-    {
-        [HarmonyPostfix]
-        [HarmonyPatch(nameof(BlockEntityFruitTreeBranch.FromTreeAttributes))]
-        public static void FromTreeAttributesPostfix(BlockEntityFruitTreeBranch __instance, ITreeAttribute tree)
+        private static CustomBlockEntityFruitTreeBranch? GetPlacedBranchEntity(IWorldAccessor world, BlockSelection blockSel)
         {
-            FruitTreeCuttingPlacementStorage.FromTreeAttributes(__instance, tree);
-        }
+            var be = world.BlockAccessor.GetBlockEntity(blockSel.Position) as CustomBlockEntityFruitTreeBranch;
+            if (be != null || blockSel.Face == null)
+            {
+                return be;
+            }
 
-        [HarmonyPostfix]
-        [HarmonyPatch(nameof(BlockEntityFruitTreeBranch.ToTreeAttributes))]
-        public static void ToTreeAttributesPostfix(BlockEntityFruitTreeBranch __instance, ITreeAttribute tree)
-        {
-            FruitTreeCuttingPlacementStorage.ToTreeAttributes(__instance, tree);
+            return world.BlockAccessor.GetBlockEntity(blockSel.Position.AddCopy(blockSel.Face)) as CustomBlockEntityFruitTreeBranch;
         }
     }
 }
