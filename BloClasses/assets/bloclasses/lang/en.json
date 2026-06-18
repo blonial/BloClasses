@@ -412,7 +412,7 @@
   "game:charattribute-toolDurability-0.1": "+10% tool durability",
   "game:charattribute-doubleCharcoalChance-0.2": "+20% double charcoal chance",
   "game:charattribute-hammerDurabilityPreservationChance-0.2": "+20% hammer durability preservation chance",
-  "game:charattribute-fireDamage--0.5": "-50% fire damage",
+  "game:charattribute-fireDamageMod--0.5": "-50% fire damage",
   "game:charattribute-freezeResistance-2": "+2 freeze resistance",
   "game:charattribute-swimmingSpeed--0.25": "-25% swimming speed",
   "game:charattribute-hungerrate-0.15": "+15% hunger rate",

@@ -414,7 +414,7 @@
   "game:charattribute-toolDurability-0.1": "+10% wytrzymałości narzędzi",
   "game:charattribute-doubleCharcoalChance-0.2": "+20% szans na podwójny węgiel drzewny",
   "game:charattribute-hammerDurabilityPreservationChance-0.2": "+20% szans zachowania wytrzymałości młota",
-  "game:charattribute-fireDamage--0.5": "-50% obrażeń od ognia",
+  "game:charattribute-fireDamageMod--0.5": "-50% obrażeń od ognia",
   "game:charattribute-freezeResistance-2": "+2 odporności na zimno",
   "game:charattribute-swimmingSpeed--0.25": "-25% szybkości pływania",
   "game:charattribute-hungerrate-0.15": "+15% tempa głodu",
