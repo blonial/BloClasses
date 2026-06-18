@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using BloClasses.EntityBehaviors;
+using HarmonyLib;
 using RPClasses.BlockEntities;
 using RPClasses.Blocks;
 using Vintagestory.API.Client;
@@ -9,16 +10,16 @@ namespace BloClasses
     public class BloClassesModSystem : ModSystem
     {
 
-        private Harmony? Patcher;
+        private static Harmony? Patcher;
 
         public override void Start(ICoreAPI api)
         {
             api.RegisterBlockClass("CustomBlockCookingContainer", typeof(CustomBlockCookingContainer));
-            api.RegisterBlockEntityClass("CustomBlockEntityFirepit", typeof(CustomBlockEntityFirepit));
-        }
 
-        public override void StartClientSide(ICoreClientAPI api)
-        {
+            api.RegisterBlockEntityClass("CustomBlockEntityFirepit", typeof(CustomBlockEntityFirepit));
+
+            api.RegisterEntityBehaviorClass("UndergroundStabilityLossModEntityBehavior", typeof(UndergroundStabilityLossModEntityBehavior));
+
             if (Patcher == null)
             {
                 Patcher = new Harmony(Mod.Info.ModID);

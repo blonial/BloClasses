@@ -1,0 +1,54 @@
+﻿{
+  "code": "arrow-reinforced",
+  "class": "EntityProjectile",
+  "tags": ["inanimate", "projectile"],
+  "variantgroups": [
+    {
+      "code": "material",
+      "states": ["iron", "steel", "meteoriciron"]
+    }
+  ],
+  "attributes": {
+    "isProjectile": true
+  },
+  "hitboxSize": {
+    "x": 0.1,
+    "y": 0.1
+  },
+  "behaviorConfigs": {
+    "passivephysics": {
+      "groundDragFactor": 1,
+      "airDragFactor": 0.25,
+      "gravityFactor": 0.75
+    }
+  },
+  "client": {
+    "size": 0.75,
+    "renderer": "Shape",
+    "shapeByType": {
+      "*": {
+        "base": "bloclasses:entity/nonliving/projectile/arrow/arrow-reinforced"
+      }
+    },
+    "texturesByType": {
+      "*": {
+        "material": { "base": "game:block/metal/ingot/{material}" }
+      }
+    },
+    "behaviors": [
+      { "code": "passivephysics" },
+      { "code": "interpolateposition" }
+    ]
+  },
+  "server": {
+    "behaviors": [
+      { "code": "passivephysics" },
+      {
+        "code": "despawn",
+        "minSeconds": 600
+      },
+      { "code": "entitystatetags" }
+    ]
+  },
+  "sounds": {}
+}

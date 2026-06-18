@@ -1,0 +1,287 @@
+[
+  {
+    "code": "bloclasses-stinkbait-doughx1",
+    "perishableProps": {
+      "freshHours": { "avg": 36 },
+      "transitionHours": { "avg": 24 },
+      "transitionRatio": 0.1,
+      "transitionedStack": { "type": "item", "code": "game:rot" }
+    },
+    "shape": { "base": "game:block/food/meal/liquid" },
+    "ingredients": [
+      {
+        "code": "water",
+        "validStacks": [{ "type": "item", "code": "game:waterportion" }],
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "portionSizeLitres": 1
+      },
+      {
+        "code": "fennel",
+        "validStacks": [
+          { "type": "item", "code": "bloclasses:vegetable-fennel" },
+          { "type": "item", "code": "bloclasses:spice-licorice-raw" }
+        ],
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "code": "dough",
+        "validStacks": [{ "type": "item", "code": "bloclasses:dough-*" }],
+        "minQuantity": 1,
+        "maxQuantity": 1
+      }
+    ],
+    "cooksInto": {
+      "type": "Item",
+      "code": "game:fishingbait-dough",
+      "quantity": 5
+    }
+  },
+  {
+    "code": "bloclasses-stinkbait-doughx1",
+    "perishableProps": {
+      "freshHours": { "avg": 36 },
+      "transitionHours": { "avg": 24 },
+      "transitionRatio": 0.1,
+      "transitionedStack": { "type": "item", "code": "game:rot" }
+    },
+    "shape": { "base": "game:block/food/meal/liquid" },
+    "ingredients": [
+      {
+        "code": "water",
+        "validStacks": [{ "type": "item", "code": "game:waterportion" }],
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "portionSizeLitres": 1
+      },
+      {
+        "code": "fennel",
+        "validStacks": [
+          { "type": "item", "code": "game:vegetable-fennel" },
+          { "type": "item", "code": "game:spice-licorice-raw" }
+        ],
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "code": "dough",
+        "validStacks": [{ "type": "item", "code": "bloclasses:dough-*" }],
+        "minQuantity": 1,
+        "maxQuantity": 1
+      }
+    ],
+    "cooksInto": {
+      "type": "Item",
+      "code": "game:fishingbait-dough",
+      "quantity": 4
+    }
+  },
+  {
+    "code": "bloclasses-stinkbait-doughx1",
+    "perishableProps": {
+      "freshHours": { "avg": 36 },
+      "transitionHours": { "avg": 24 },
+      "transitionRatio": 0.1,
+      "transitionedStack": { "type": "item", "code": "game:rot" }
+    },
+    "shape": { "base": "game:block/food/meal/liquid" },
+    "ingredients": [
+      {
+        "code": "water",
+        "validStacks": [{ "type": "item", "code": "game:waterportion" }],
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "portionSizeLitres": 1
+      },
+      {
+        "code": "fennel",
+        "validStacks": [
+          { "type": "item", "code": "bloclasses:vegetable-fennel" },
+          { "type": "item", "code": "bloclasses:spice-licorice-raw" }
+        ],
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "code": "dough",
+        "validStacks": [{ "type": "item", "code": "game:dough-*" }],
+        "minQuantity": 1,
+        "maxQuantity": 1
+      }
+    ],
+    "cooksInto": {
+      "type": "Item",
+      "code": "game:fishingbait-dough",
+      "quantity": 4
+    }
+  },
+  {
+    "code": "bloclasses-stinkbait-redmeatx1",
+    "perishableProps": {
+      "freshHours": { "avg": 36 },
+      "transitionHours": { "avg": 24 },
+      "transitionRatio": 0.1,
+      "transitionedStack": { "type": "item", "code": "game:rot" }
+    },
+    "shape": { "base": "game:block/food/meal/liquid" },
+    "ingredients": [
+      {
+        "code": "water",
+        "validStacks": [{ "type": "item", "code": "game:waterportion" }],
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "portionSizeLitres": 1
+      },
+      {
+        "code": "fennel",
+        "validStacks": [
+          { "type": "item", "code": "bloclasses:vegetable-fennel" },
+          { "type": "item", "code": "bloclasses:spice-licorice-raw" }
+        ],
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "code": "meat",
+        "validStacks": [
+          { "type": "item", "code": "game:redmeat-raw" },
+          { "type": "item", "code": "game:redmeat-cooked" }
+        ],
+        "minQuantity": 1,
+        "maxQuantity": 1
+      }
+    ],
+    "cooksInto": {
+      "type": "Item",
+      "code": "game:fishingbait-redmeat",
+      "quantity": 6
+    }
+  },
+  {
+    "code": "bloclasses-stinkbait-bushmeatx1",
+    "perishableProps": {
+      "freshHours": { "avg": 36 },
+      "transitionHours": { "avg": 24 },
+      "transitionRatio": 0.1,
+      "transitionedStack": { "type": "item", "code": "rot" }
+    },
+    "shape": { "base": "game:block/food/meal/liquid" },
+    "ingredients": [
+      {
+        "code": "water",
+        "validStacks": [{ "type": "item", "code": "game:waterportion" }],
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "portionSizeLitres": 1
+      },
+      {
+        "code": "fennel",
+        "validStacks": [
+          { "type": "item", "code": "bloclasses:vegetable-fennel" },
+          { "type": "item", "code": "bloclasses:spice-licorice-raw" }
+        ],
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "code": "meat",
+        "validStacks": [
+          { "type": "item", "code": "game:bushmeat-raw" },
+          { "type": "item", "code": "game:bushmeat-cooked" }
+        ],
+        "minQuantity": 1,
+        "maxQuantity": 1
+      }
+    ],
+    "cooksInto": {
+      "type": "Item",
+      "code": "game:fishingbait-bushmeat",
+      "quantity": 5
+    }
+  },
+  {
+    "code": "bloclasses-stinkbait-fishmeatx1",
+    "perishableProps": {
+      "freshHours": { "avg": 36 },
+      "transitionHours": { "avg": 24 },
+      "transitionRatio": 0.1,
+      "transitionedStack": { "type": "item", "code": "game:rot" }
+    },
+    "shape": { "base": "game:block/food/meal/liquid" },
+    "ingredients": [
+      {
+        "code": "water",
+        "validStacks": [{ "type": "item", "code": "game:waterportion" }],
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "portionSizeLitres": 1
+      },
+      {
+        "code": "fennel",
+        "validStacks": [
+          { "type": "item", "code": "bloclasses:vegetable-fennel" },
+          { "type": "item", "code": "bloclasses:spice-licorice-raw" }
+        ],
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "code": "meat",
+        "validStacks": [
+          { "type": "item", "code": "game:fish-raw" },
+          { "type": "item", "code": "game:fish-cooked" }
+        ],
+        "minQuantity": 1,
+        "maxQuantity": 1
+      }
+    ],
+    "cooksInto": {
+      "type": "Item",
+      "code": "game:fishingbait-fishmeat",
+      "quantity": 5
+    }
+  },
+  {
+    "code": "bloclasses-stinkbait-poultryx1",
+    "perishableProps": {
+      "freshHours": { "avg": 36 },
+      "transitionHours": { "avg": 24 },
+      "transitionRatio": 0.1,
+      "transitionedStack": { "type": "item", "code": "game:rot" }
+    },
+    "shape": { "base": "game:block/food/meal/liquid" },
+    "ingredients": [
+      {
+        "code": "water",
+        "validStacks": [{ "type": "item", "code": "game:waterportion" }],
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "portionSizeLitres": 1
+      },
+      {
+        "code": "fennel",
+        "validStacks": [
+          { "type": "item", "code": "bloclasses:vegetable-fennel" },
+          { "type": "item", "code": "bloclasses:spice-licorice-raw" }
+        ],
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "code": "meat",
+        "validStacks": [
+          { "type": "item", "code": "game:poultry-raw" },
+          { "type": "item", "code": "game:poultry-cooked" }
+        ],
+        "minQuantity": 1,
+        "maxQuantity": 1
+      }
+    ],
+    "cooksInto": {
+      "type": "Item",
+      "code": "game:fishingbait-poultry",
+      "quantity": 6
+    }
+  }
+]

@@ -1,0 +1,863 @@
+[
+  {
+    "op": "addmerge",
+    "path": "/ingredients/5/validStacks",
+    "value": [
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cabbage",
+        "shapeElement": "game:game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-carrot",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-onion",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-parsnip",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-turnip",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-pumpkin",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cassava",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:legume-soybean",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:legume-peanut",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledvegetable-*",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledlegume-soybean",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-fennel",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      }
+    ],
+    "file": "game:recipes/cooking/meatystew.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/ingredients/6/validStacks",
+    "value": [
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cabbage",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-carrot",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-onion",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-parsnip",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-turnip",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-pumpkin",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cassava",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:legume-soybean",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:legume-peanut",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledvegetable-*",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledlegume-soybean",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-fennel",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      }
+    ],
+    "file": "game:recipes/cooking/meatystew.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/ingredients/7/validStacks",
+    "value": [
+      {
+        "type": "item",
+        "code": "bloclasses:fruit-*",
+        "shapeElement": "game:bowl/fruit game:1/*"
+      }
+    ],
+    "file": "game:recipes/cooking/meatystew.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/ingredients/0/validStacks",
+    "value": [
+      {
+        "type": "item",
+        "code": "bloclasses:grain-*",
+        "shapeElement": "game:bowl/grain/*"
+      }
+    ],
+    "file": "game:recipes/cooking/porridge.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/ingredients/1/validStacks",
+    "value": [
+      {
+        "type": "item",
+        "code": "bloclasses:fruit-*",
+        "shapeElement": "game:bowl/fruit game:1/*"
+      }
+    ],
+    "file": "game:recipes/cooking/porridge.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/ingredients/2/validStacks",
+    "value": [
+      {
+        "type": "item",
+        "code": "bloclasses:fruit-*",
+        "shapeElement": "game:bowl/fruit game:2/*"
+      }
+    ],
+    "file": "game:recipes/cooking/porridge.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/ingredients/3/validStacks",
+    "value": [
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cabbage",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-carrot",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-onion",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-parsnip",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-turnip",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-pumpkin",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cassava",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledvegetable-*",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-fennel",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      }
+    ],
+    "file": "game:recipes/cooking/porridge.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/ingredients/4/validStacks",
+    "value": [
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cabbage",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-carrot",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-onion",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-parsnip",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-turnip",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-pumpkin",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cassava",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledvegetable-*",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-fennel",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      }
+    ],
+    "file": "game:recipes/cooking/porridge.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/ingredients/5/validStacks",
+    "value": [
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cabbage",
+        "shapeElement": "game:bowl/vegetable2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-carrot",
+        "shapeElement": "game:bowl/vegetable2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-onion",
+        "shapeElement": "game:bowl/vegetable2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-parsnip",
+        "shapeElement": "game:bowl/vegetable2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-turnip",
+        "shapeElement": "game:bowl/vegetable2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-pumpkin",
+        "shapeElement": "game:bowl/vegetable2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cassava",
+        "shapeElement": "game:bowl/vegetable2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:legume-soybean",
+        "shapeElement": "game:bowl/vegetable2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledvegetable-*",
+        "shapeElement": "game:bowl/vegetable2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledlegume-soybean",
+        "shapeElement": "game:bowl/vegetable2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-fennel",
+        "shapeElement": "game:bowl/vegetable2/*"
+      }
+    ],
+    "file": "game:recipes/cooking/scrambledeggs.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/ingredients/6/validStacks",
+    "value": [
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cabbage",
+        "shapeElement": "game:bowl/vegetable3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-carrot",
+        "shapeElement": "game:bowl/vegetable3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-onion",
+        "shapeElement": "game:bowl/vegetable3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-parsnip",
+        "shapeElement": "game:bowl/vegetable3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-turnip",
+        "shapeElement": "game:bowl/vegetable3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-pumpkin",
+        "shapeElement": "game:bowl/vegetable3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cassava",
+        "shapeElement": "game:bowl/vegetable3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:legume-soybean",
+        "shapeElement": "game:bowl/vegetable3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledvegetable-*",
+        "shapeElement": "game:bowl/vegetable3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledlegume-soybean",
+        "shapeElement": "game:bowl/vegetable3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-fennel",
+        "shapeElement": "game:bowl/vegetable3/*"
+      }
+    ],
+    "file": "game:recipes/cooking/scrambledeggs.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/ingredients/1/validStacks",
+    "value": [
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cabbage",
+        "shapeElement": "game:bowl/vegetable game:base game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-carrot",
+        "shapeElement": "game:bowl/vegetable game:base game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-onion",
+        "shapeElement": "game:bowl/vegetable game:base game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-parsnip",
+        "shapeElement": "game:bowl/vegetable game:base game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-turnip",
+        "shapeElement": "game:bowl/vegetable game:base game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-pumpkin",
+        "shapeElement": "game:bowl/vegetable game:base game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cassava",
+        "shapeElement": "game:bowl/vegetable game:base game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledvegetable-*",
+        "shapeElement": "game:bowl/vegetable game:base game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledlegume-soybean",
+        "shapeElement": "game:bowl/vegetable game:base game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-fennel",
+        "shapeElement": "game:bowl/vegetable game:base game:1/*"
+      }
+    ],
+    "file": "game:recipes/cooking/soup.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/ingredients/2/validStacks",
+    "value": [
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cabbage",
+        "shapeElement": "game:bowl/vegetable game:base game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-carrot",
+        "shapeElement": "game:bowl/vegetable game:base game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-onion",
+        "shapeElement": "game:bowl/vegetable game:base game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-parsnip",
+        "shapeElement": "game:bowl/vegetable game:base game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-turnip",
+        "shapeElement": "game:bowl/vegetable game:base game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-pumpkin",
+        "shapeElement": "game:bowl/vegetable game:base game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cassava",
+        "shapeElement": "game:bowl/vegetable game:base game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledvegetable-*",
+        "shapeElement": "game:bowl/vegetable game:base game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledlegume-soybean",
+        "shapeElement": "game:bowl/vegetable game:base game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-fennel",
+        "shapeElement": "game:bowl/vegetable game:base game:2/*"
+      }
+    ],
+    "file": "game:recipes/cooking/soup.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/ingredients/3/validStacks",
+    "value": [
+      {
+        "type": "item",
+        "code": "vegetable-cabbage",
+        "shapeElement": "game:bowl/vegetable game:base game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "vegetable-carrot",
+        "shapeElement": "game:bowl/vegetable game:base game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "vegetable-onion",
+        "shapeElement": "game:bowl/vegetable game:base game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "vegetable-parsnip",
+        "shapeElement": "game:bowl/vegetable game:base game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "vegetable-turnip",
+        "shapeElement": "game:bowl/vegetable game:base game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "vegetable-pumpkin",
+        "shapeElement": "game:bowl/vegetable game:base game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "vegetable-cassava",
+        "shapeElement": "game:bowl/vegetable game:base game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "pickledvegetable-*",
+        "shapeElement": "game:bowl/vegetable game:base game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "pickledlegume-soybean",
+        "shapeElement": "game:bowl/vegetable game:base game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "vegetable-fennel",
+        "shapeElement": "game:bowl/vegetable game:base game:3/*"
+      }
+    ],
+    "file": "game:recipes/cooking/soup.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/ingredients/0/validStacks",
+    "value": [
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cabbage",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-carrot",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-onion",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-parsnip",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-turnip",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-pumpkin",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cassava",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:legume-soybean",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:legume-peanut",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledvegetable-*",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledlegume-soybean",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-fennel",
+        "shapeElement": "game:bowl/vegetable game:1/*"
+      }
+    ],
+    "file": "game:recipes/cooking/vegetablestew.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/ingredients/1/validStacks",
+    "value": [
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cabbage",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-carrot",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-onion",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-parsnip",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-turnip",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-pumpkin",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cassava",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:legume-soybean",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:legume-peanut",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledvegetable-*",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledlegume-soybean",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-fennel",
+        "shapeElement": "game:bowl/vegetable game:2/*"
+      }
+    ],
+    "file": "game:recipes/cooking/vegetablestew.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/ingredients/2/validStacks",
+    "value": [
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cabbage",
+        "shapeElement": "game:bowl/vegetable game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-carrot",
+        "shapeElement": "game:bowl/vegetable game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-onion",
+        "shapeElement": "game:bowl/vegetable game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-parsnip",
+        "shapeElement": "game:bowl/vegetable game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-turnip",
+        "shapeElement": "game:bowl/vegetable game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-pumpkin",
+        "shapeElement": "game:bowl/vegetable game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cassava",
+        "shapeElement": "game:bowl/vegetable game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:legume-soybean",
+        "shapeElement": "game:bowl/vegetable game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:legume-peanut",
+        "shapeElement": "game:bowl/vegetable game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledvegetable-*",
+        "shapeElement": "game:bowl/vegetable game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledlegume-soybean",
+        "shapeElement": "game:bowl/vegetable game:3/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-fennel",
+        "shapeElement": "game:bowl/vegetable game:3/*"
+      }
+    ],
+    "file": "game:recipes/cooking/vegetablestew.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/ingredients/3/validStacks",
+    "value": [
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cabbage",
+        "shapeElement": "game:bowl/vegetable game:4/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-carrot",
+        "shapeElement": "game:bowl/vegetable game:4/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-onion",
+        "shapeElement": "game:bowl/vegetable game:4/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-parsnip",
+        "shapeElement": "game:bowl/vegetable game:4/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-turnip",
+        "shapeElement": "game:bowl/vegetable game:4/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-pumpkin",
+        "shapeElement": "game:bowl/vegetable game:4/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-cassava",
+        "shapeElement": "game:bowl/vegetable game:4/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:legume-soybean",
+        "shapeElement": "game:bowl/vegetable game:4/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:legume-peanut",
+        "shapeElement": "game:bowl/vegetable game:4/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledvegetable-*",
+        "shapeElement": "game:bowl/vegetable game:4/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:pickledlegume-soybean",
+        "shapeElement": "game:bowl/vegetable game:4/*"
+      },
+      {
+        "type": "item",
+        "code": "bloclasses:vegetable-fennel",
+        "shapeElement": "game:bowl/vegetable game:4/*"
+      }
+    ],
+    "file": "game:recipes/cooking/vegetablestew.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/ingredients/1/validStacks",
+    "value": [
+      {
+        "type": "item",
+        "code": "bloclasses:fruit-*",
+        "shapeElement": "game:bowl/fruit"
+      }
+    ],
+    "file": "game:recipes/cooking/jam.json"
+  }
+]

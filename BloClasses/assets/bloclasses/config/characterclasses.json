@@ -45,5 +45,40 @@
         "code": "game:clothes-hand-hunter-gloves"
       }
     ]
+  },
+  {
+    "enabled": true,
+    "code": "bcfarmer",
+    "traits": [
+      "bcgreenfingered",
+      "bcgrower",
+      "bcbusy",
+      "bchardy",
+      "bcsuperplants",
+      "bcsoilscientist",
+      "bcanimallover",
+      "bcthesmellofcompost",
+      "bcattachmenttotheland",
+      "bcnosun",
+      "bcbumpkin"
+    ],
+    "gear": [
+      {
+        "type": "item",
+        "code": "game:clothes-head-broadbrim"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-upperbody-peasent-shirt"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-lowerbody-grass"
+      },
+      {
+        "type": "item",
+        "code": "game:clothes-foot-farmhand"
+      }
+    ]
   }
 ]

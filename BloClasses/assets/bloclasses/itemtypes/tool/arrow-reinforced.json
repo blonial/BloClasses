@@ -10,7 +10,7 @@
   "maxstacksize": 64,
   "storageFlags": 513,
   "shapeByType": {
-    "*": { "base": "game:item/tool/arrow-copper" }
+    "*": { "base": "bloclasses:item/tool/arrow-reinforced" }
   },
   "texturesByType": {
     "*": {
@@ -68,7 +68,7 @@
   },
   "attributes": {
     "arrowEntityCodeByType": {
-      "*": "arrow-reinforced-{material}"
+      "*": "bloclasses:arrow-reinforced-{material}"
     },
     "damageByType": {
       "*-iron": 2.25,
