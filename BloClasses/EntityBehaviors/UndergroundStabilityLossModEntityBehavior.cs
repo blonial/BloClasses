@@ -1,4 +1,3 @@
-﻿using System.Collections.Generic;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Datastructures;
@@ -11,11 +10,7 @@ namespace BloClasses.EntityBehaviors
     {
         private float timeSinceLastUpdate = 0.0f;
 
-        private bool HasUndergroundStabilityLossMod = false;
-
         private readonly int SunLightLevelForInCave = 5;
-
-        private List<string> AffectedClasses = new List<string>() { "bcfarmer" };
 
         private EntityBehaviorTemporalStabilityAffected? TemporalAffected => entity.GetBehavior<EntityBehaviorTemporalStabilityAffected>();
 
@@ -27,48 +22,16 @@ namespace BloClasses.EntityBehaviors
         public override void Initialize(EntityProperties properties, JsonObject attributes)
         {
             base.Initialize(properties, attributes);
-
-            CheckForUndergroundStabilityLoss();
-            entity.WatchedAttributes.RegisterModifiedListener("characterClass", CheckForUndergroundStabilityLoss);
-        }
-
-        public void CheckForUndergroundStabilityLoss()
-        {
-            if (entity == null || entity is not EntityPlayer)
-            {
-                HasUndergroundStabilityLossMod = false;
-                return;
-            }
-
-            var charClass = entity.WatchedAttributes.GetString("characterClass");
-            if (charClass == null)
-            {
-                HasUndergroundStabilityLossMod = false;
-                return;
-            }
-
-            if (!AffectedClasses.Contains(charClass))
-            {
-                HasUndergroundStabilityLossMod = false;
-                return;
-            }
-
-            HasUndergroundStabilityLossMod = true;
         }
 
         public override void OnGameTick(float deltaTime)
         {
-            if (entity == null || entity is not EntityPlayer || TemporalAffected == null)
+            if (entity == null || entity is not EntityPlayer player || TemporalAffected == null)
             {
                 return;
             }
 
-            if (entity.World.PlayerByUid(((EntityPlayer)entity).PlayerUID) is IServerPlayer serverPlayer && serverPlayer.ConnectionState != EnumClientState.Playing)
-            {
-                return;
-            }
-
-            if (!HasUndergroundStabilityLossMod)
+            if (entity.World.PlayerByUid(player.PlayerUID) is IServerPlayer serverPlayer && serverPlayer.ConnectionState != EnumClientState.Playing)
             {
                 return;
             }
@@ -79,11 +42,11 @@ namespace BloClasses.EntityBehaviors
             {
                 timeSinceLastUpdate = 0.0f;
 
-                HandleUndergroundStabilityLoss();
+                HandleStabilityLossModifiers();
             }
         }
 
-        private void HandleUndergroundStabilityLoss()
+        private void HandleStabilityLossModifiers()
         {
             if (TemporalAffected == null)
             {
@@ -91,12 +54,18 @@ namespace BloClasses.EntityBehaviors
             }
 
             var tempStabVelocity = TemporalAffected.TempStabChangeVelocity;
-            if (entity.World.BlockAccessor.GetLightLevel(entity.Pos.AsBlockPos, EnumLightLevelType.OnlySunLight) < SunLightLevelForInCave && tempStabVelocity < 0)
+            if (tempStabVelocity >= 0)
             {
-                var caveLoss = entity.Stats.GetBlended("undergroundStabilityLossMod");
-                TemporalAffected.TempStabChangeVelocity = (tempStabVelocity * caveLoss);
                 return;
             }
+
+            var modifiedVelocity = tempStabVelocity * entity.Stats.GetBlended("overallStabilityLossMod");
+            if (entity.World.BlockAccessor.GetLightLevel(entity.Pos.AsBlockPos, EnumLightLevelType.OnlySunLight) < SunLightLevelForInCave)
+            {
+                modifiedVelocity *= entity.Stats.GetBlended("undergroundStabilityLossMod");
+            }
+
+            TemporalAffected.TempStabChangeVelocity = modifiedVelocity;
         }
     }
 }

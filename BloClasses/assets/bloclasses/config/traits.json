@@ -280,7 +280,7 @@
     "type": "positive",
     "attributes": {
       "panningSpeed": 0.5,
-      "panningDrop": 0.5
+      "panningDropQualityMod": 0.25
     }
   },
   {
@@ -323,7 +323,7 @@
     "code": "bcwanderer",
     "type": "negative",
     "attributes": {
-      "undergroundStabilityLossMod": 0.2
+      "overallStabilityLossMod": 0.2
     }
   },
   {
