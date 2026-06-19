@@ -1,0 +1,62 @@
+[
+  {
+    "ingredientPattern": "HM",
+    "requiresTrait": "bcsweettooth",
+    "ingredients": {
+      "H": {
+        "type": "block",
+        "code": "game:woodbucket",
+        "recipeAttributes": {
+          "requiresContent": { "type": "item", "code": "game:honeyportion" },
+          "requiresLitres": 0.1
+        }
+      },
+      "M": { "type": "item", "code": "game:redmeat-raw" }
+    },
+    "width": 2,
+    "height": 1,
+    "name": "honeymeat",
+    "shapeless": true,
+    "output": { "type": "item", "code": "bloclasses:honeymeat" }
+  },
+  {
+    "ingredientPattern": "HM",
+    "requiresTrait": "bcsweettooth",
+    "ingredients": {
+      "H": {
+        "type": "block",
+        "code": "game:bowl-*-fired",
+        "recipeAttributes": {
+          "requiresContent": { "type": "item", "code": "game:honeyportion" },
+          "requiresLitres": 0.1
+        }
+      },
+      "M": { "type": "item", "code": "game:redmeat-raw" }
+    },
+    "width": 2,
+    "height": 1,
+    "name": "honeymeat",
+    "shapeless": true,
+    "output": { "type": "item", "code": "bloclasses:honeymeat" }
+  },
+  {
+    "ingredientPattern": "HM",
+    "requiresTrait": "bcsweettooth",
+    "ingredients": {
+      "H": {
+        "type": "block",
+        "code": "game:jug-*-fired",
+        "recipeAttributes": {
+          "requiresContent": { "type": "item", "code": "game:honeyportion" },
+          "requiresLitres": 0.1
+        }
+      },
+      "M": { "type": "item", "code": "game:redmeat-raw" }
+    },
+    "width": 2,
+    "height": 1,
+    "name": "honeymeat",
+    "shapeless": true,
+    "output": { "type": "item", "code": "bloclasses:honeymeat" }
+  }
+]
