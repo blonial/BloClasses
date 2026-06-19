@@ -1,0 +1,18 @@
+{
+  "requiresTrait": "bcdrifter",
+  "ingredientPattern": "RAR,BSB,PSP",
+  "ingredients": {
+    "R": { "type": "item", "code": "game:resin" },
+    "A": { "type": "item", "code": "game:antler-{type}-*" },
+    "B": { "type": "item", "code": "game:bone" },
+    "S": { "type": "item", "code": "game:stick" },
+    "P": { "type": "item", "code": "game:rope" }
+  },
+  "width": 3,
+  "height": 3,
+  "output": {
+    "type": "item",
+    "code": "bloclasses:walkingstick-cowskull",
+    "quantity": 1
+  }
+}

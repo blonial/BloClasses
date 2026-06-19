@@ -194,6 +194,8 @@
   "bloclasses:item-rawcassava-dried": "Pożywny suszony maniok",
   "bloclasses:item-honeymeat": "Miodowane czerwone mięso",
   "bloclasses:itemdesc-honeymeat": "Surowe czerwone mięso zakonserwowane w miodzie.",
+  "bloclasses:item-walkingstick-cowskull": "Kij podróżny z krowią czaszką",
+  "bloclasses:itemdesc-walkingstick-cowskull": "Ozdobny kij podróżny, który pomaga oszczędzać energię podczas marszu\n<font color=\"#B3FFFFFF\"><i>Trzymany w dowolnej ręce: +10% szybkości chodzenia i -10% tempa głodu. Nie wpływa na sprint.</i></font>",
   "bloclasses:block-largebarrel": "Duża beczka",
   "bloclasses:item-richciderportion-cherry": "Bogaty cydr wiśniowy",
   "bloclasses:item-richciderportion-peach": "Bogaty cydr brzoskwiniowy",

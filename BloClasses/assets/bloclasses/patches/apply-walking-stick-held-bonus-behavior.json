@@ -1,0 +1,16 @@
+[
+  {
+    "file": "game:entities/humanoid/player.json",
+    "op": "addeach",
+    "path": "/client/behaviors/-",
+    "value": [{ "code": "WalkingStickHeldBonusEntityBehavior" }],
+    "side": "Server"
+  },
+  {
+    "file": "game:entities/humanoid/player.json",
+    "op": "addeach",
+    "path": "/server/behaviors/-",
+    "value": [{ "code": "WalkingStickHeldBonusEntityBehavior" }],
+    "side": "Server"
+  }
+]

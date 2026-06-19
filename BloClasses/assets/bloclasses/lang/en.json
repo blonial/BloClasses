@@ -194,6 +194,8 @@
   "bloclasses:item-rawcassava-dried": "Nutritious dried cassava",
   "bloclasses:item-honeymeat": "Honeyed redmeat",
   "bloclasses:itemdesc-honeymeat": "Raw redmeat preserved in honey.",
+  "bloclasses:item-walkingstick-cowskull": "Walking stick with cow skull",
+  "bloclasses:itemdesc-walkingstick-cowskull": "A decorated walking aid that conserves energy while walking\n<font color=\"#B3FFFFFF\"><i>Held in either hand: +10% walking speed and -10% hunger rate. Does not affect sprinting.</i></font>",
   "bloclasses:block-largebarrel": "Large barrel",
   "bloclasses:item-richciderportion-cherry": "Rich cherry cider",
   "bloclasses:item-richciderportion-peach": "Rich peach cider",

@@ -21,6 +21,7 @@ namespace BloClasses
             api.RegisterBlockEntityClass("CustomBlockEntityFruitTreeBranch", typeof(CustomBlockEntityFruitTreeBranch));
 
             api.RegisterEntityBehaviorClass("UndergroundStabilityLossModEntityBehavior", typeof(UndergroundStabilityLossModEntityBehavior));
+            api.RegisterEntityBehaviorClass("WalkingStickHeldBonusEntityBehavior", typeof(WalkingStickHeldBonusEntityBehavior));
 
             if (Patcher == null)
             {
