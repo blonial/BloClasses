@@ -19,6 +19,12 @@
   },
   {
     "op": "addmerge",
+    "path": "/ingredients/T/allowedVariants",
+    "value": ["bladehead-short-meteoriciron", "bladehead-short-steel"],
+    "file": "game:recipes/grid/claycovering.json"
+  },
+  {
+    "op": "addmerge",
     "path": "/allowedVariants",
     "value": ["bladehead-short-meteoriciron", "bladehead-short-steel"],
     "file": "game:itemtypes/toolhead/bladehead.json"
