@@ -4,5 +4,38 @@
     "path": "/classByType/*-fired",
     "value": "CustomBlockCookingContainer",
     "file": "game:blocktypes/clay/fired/pot.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/attributesByType/*-cooked/textureMapping",
+    "value": {
+      "bloclasses:grain-flax": ["grain", "group1"],
+      "bloclasses:vegetable-carrot": ["vegetable", "group1"],
+      "bloclasses:pickledvegetable-carrot": ["vegetable", "group1"],
+      "bloclasses:grain-rice": ["grain", "group4"],
+      "bloclasses:vegetable-parsnip": ["vegetable", "group4"],
+      "bloclasses:pickledvegetable-parsnip": ["vegetable", "group4"],
+      "bloclasses:grain-rye": ["grain", "group5"],
+      "bloclasses:vegetable-turnip": ["vegetable", "group5"],
+      "bloclasses:pickledvegetable-turnip": ["vegetable", "group5"],
+      "bloclasses:grain-spelt": ["grain", "group6"],
+      "bloclasses:vegetable-onion": ["vegetable", "group6"],
+      "bloclasses:pickledvegetable-onion": ["vegetable", "group6"],
+      "bloclasses:honeymeat": ["meat", "group6"],
+      "bloclasses:fruit-pineapple": ["fruit", "group7"],
+      "bloclasses:grain-amaranth": ["grain", "group8"],
+      "bloclasses:vegetable-pumpkin": ["vegetable", "group8"],
+      "bloclasses:pickledvegetable-pumpkin": ["vegetable", "group8"],
+      "bloclasses:grain-sunflower": ["grain", "group9"],
+      "bloclasses:legume-soybean": ["vegetable", "group9"],
+      "bloclasses:pickledlegume-soybean": ["vegetable", "group9"],
+      "bloclasses:vegetable-cabbage": ["vegetable", "group10"],
+      "bloclasses:pickledvegetable-cabbage": ["vegetable", "group10"],
+      "bloclasses:vegetable-cassava": ["vegetable", "group11"],
+      "bloclasses:legume-peanut": ["vegetable", "group12"],
+      "bloclasses:vegetable-fennel": ["vegetable", "group28"],
+      "bloclasses:pickledvegetable-fennel": ["vegetable", "group28"]
+    },
+    "file": "game:blocktypes/clay/fired/pot.json"
   }
 ]

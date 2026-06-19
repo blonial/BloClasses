@@ -2,7 +2,6 @@ using BloClasses.Blocks;
 using HarmonyLib;
 using System;
 using Vintagestory.API.Common;
-using Vintagestory.API.Datastructures;
 using Vintagestory.GameContent;
 
 namespace BloClasses.Patches
@@ -79,30 +78,46 @@ namespace BloClasses.Patches
             }
         }
 
+        [HarmonyPatch(typeof(BlockCookedContainerBase), "GetContentInDummySlot")]
+        public static class CookedContainerTransitionSpeedPatch
+        {
+            public static void Postfix(ItemSlot inslot, ItemStack itemstack, ItemSlot __result)
+            {
+                AddGoodCookPerishSpeedModifier(inslot, itemstack, __result);
+            }
+        }
+
+        [HarmonyPatch(typeof(BlockMeal), "GetContentInDummySlot")]
+        public static class MealTransitionSpeedPatch
+        {
+            public static void Postfix(ItemSlot inslot, ItemStack itemstack, ItemSlot __result)
+            {
+                AddGoodCookPerishSpeedModifier(inslot, itemstack, __result);
+            }
+        }
+
+        [HarmonyPatch(typeof(BlockCookedContainerBase), nameof(BlockCookedContainerBase.ServeIntoStack))]
+        public static class ServeIntoStackPatch
+        {
+            public static void Prefix(ItemSlot potslot, out GoodCookMealBonus? __state)
+            {
+                __state = GetBonusFromStack(potslot?.Itemstack);
+            }
+
+            public static void Postfix(bool __result, ItemSlot bowlSlot, GoodCookMealBonus? __state)
+            {
+                if (!__result || __state == null || bowlSlot?.Itemstack == null)
+                {
+                    return;
+                }
+
+                SetBonusAttributes(bowlSlot.Itemstack, __state);
+            }
+        }
+
         private static void ApplyToCookedContainer(IWorldAccessor world, ItemStack cookedContainerStack, GoodCookMealBonus bonus)
         {
-            if (cookedContainerStack.Collectible is not BlockCookedContainerBase cookedContainer)
-            {
-                return;
-            }
-
-            ItemStack[] contents = cookedContainer.GetNonEmptyContents(world, cookedContainerStack);
-            if (contents.Length == 0)
-            {
-                return;
-            }
-
             SetBonusAttributes(cookedContainerStack, bonus);
-
-            foreach (ItemStack contentStack in contents)
-            {
-                SetBonusAttributes(contentStack, bonus);
-                ApplyPerishTimeMultiplier(world, contentStack, bonus.PerishTimeMultiplier);
-            }
-
-            string? recipeCode = cookedContainerStack.Attributes.GetString("recipeCode", null);
-            float quantityServings = cookedContainerStack.Attributes.GetFloat("quantityServings", 1f);
-            cookedContainer.SetContents(recipeCode, quantityServings, cookedContainerStack, contents);
         }
 
         private static void SetBonusAttributes(ItemStack stack, GoodCookMealBonus bonus)
@@ -118,36 +133,23 @@ namespace BloClasses.Patches
             }
         }
 
-        private static void ApplyPerishTimeMultiplier(IWorldAccessor world, ItemStack stack, float multiplier)
+        private static void AddGoodCookPerishSpeedModifier(ItemSlot containerSlot, ItemStack contentStack, ItemSlot dummySlot)
         {
-            if (multiplier == 1f)
+            if (dummySlot?.Inventory == null)
             {
                 return;
             }
 
-            stack.Collectible.UpdateAndGetTransitionState(world, new DummySlot(stack), EnumTransitionType.Perish);
-
-            if (stack.Attributes["transitionstate"] is not ITreeAttribute transitionState)
+            dummySlot.Inventory.OnAcquireTransitionSpeed += (transitionType, stack, mul) =>
             {
-                return;
-            }
+                if (transitionType != EnumTransitionType.Perish)
+                {
+                    return mul;
+                }
 
-            ScaleFloatArray(transitionState, "freshHours", multiplier);
-            ScaleFloatArray(transitionState, "transitionHours", multiplier);
-            ScaleFloatArray(transitionState, "transitionedHours", multiplier);
-        }
-
-        private static void ScaleFloatArray(ITreeAttribute tree, string key, float multiplier)
-        {
-            if (tree[key] is not FloatArrayAttribute attribute)
-            {
-                return;
-            }
-
-            for (int i = 0; i < attribute.value.Length; i++)
-            {
-                attribute.value[i] *= multiplier;
-            }
+                float multiplier = GetPerishTimeMultiplier(containerSlot?.Itemstack, stack ?? contentStack);
+                return multiplier <= 0f ? mul : mul / multiplier;
+            };
         }
 
         private static float GetSaturationMultiplier(ItemStack? containerStack, ItemStack[]? contentStacks)
@@ -161,6 +163,14 @@ namespace BloClasses.Patches
                     multiplier = Math.Max(multiplier, contentStack?.Attributes.GetFloat(CustomBlockCookingContainer.CookedFoodSaturationMultiplierAttribute, 1f) ?? 1f);
                 }
             }
+
+            return multiplier;
+        }
+
+        private static float GetPerishTimeMultiplier(ItemStack? containerStack, ItemStack? contentStack)
+        {
+            float multiplier = containerStack?.Attributes.GetFloat(CustomBlockCookingContainer.CookedFoodPerishTimeMultiplierAttribute, 1f) ?? 1f;
+            multiplier = Math.Max(multiplier, contentStack?.Attributes.GetFloat(CustomBlockCookingContainer.CookedFoodPerishTimeMultiplierAttribute, 1f) ?? 1f);
 
             return multiplier;
         }
