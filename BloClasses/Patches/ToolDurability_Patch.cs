@@ -38,7 +38,10 @@ namespace BloClasses.Patches
         {
             public static MethodBase? TargetMethod()
             {
-                return AccessTools.Method(typeof(IPlayerInventoryManager), nameof(IPlayerInventoryManager.TryGiveItemstack), new[] { typeof(ItemStack), typeof(bool) });
+                Type? playerInventoryManagerType = AccessTools.TypeByName("Vintagestory.Common.PlayerInventoryManager");
+                return playerInventoryManagerType == null
+                    ? null
+                    : AccessTools.Method(playerInventoryManagerType, nameof(IPlayerInventoryManager.TryGiveItemstack), new[] { typeof(ItemStack), typeof(bool) });
             }
 
             public static void Prefix(object[] __args)
