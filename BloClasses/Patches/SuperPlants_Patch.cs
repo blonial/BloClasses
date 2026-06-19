@@ -12,14 +12,20 @@ namespace BloClasses.Patches
     {
         public static void Postfix(ref ItemStack[] __result, IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1f)
         {
-            var charSystem = world.Api.ModLoader.GetModSystem<CharacterSystem>();
-            if (charSystem == null)
+            if (byPlayer?.Entity?.WatchedAttributes == null || __result == null)
             {
                 return;
             }
 
-            var charClass = charSystem.characterClasses.Find(c => c.Code == byPlayer.Entity.WatchedAttributes.GetString("characterClass"));
-            if (charClass == null || !charClass.Traits.Contains("bccropfanatic"))
+            var charSystem = world.Api.ModLoader.GetModSystem<CharacterSystem>();
+            if (charSystem?.characterClasses == null)
+            {
+                return;
+            }
+
+            string characterClassCode = byPlayer.Entity.WatchedAttributes.GetString("characterClass");
+            var charClass = charSystem.characterClasses.Find(c => c?.Code == characterClassCode);
+            if (charClass?.Traits?.Contains("bccropfanatic") != true)
             {
                 return;
             }
@@ -30,8 +36,6 @@ namespace BloClasses.Patches
             {
                 if (stack.Collectible.Code.ToString().Contains("game:seeds"))
                 {
-                    var val = world.Rand.NextDouble();
-
                     if (world.Rand.NextDouble() <= 0.03)
                     {
                         extraDrops.Add(
