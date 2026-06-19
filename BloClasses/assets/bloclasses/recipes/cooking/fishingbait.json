@@ -1,6 +1,6 @@
 [
   {
-    "code": "bloclasses-stinkbait-doughx1",
+    "code": "bloclasses-stinkbait-dough-bloclassesx1",
     "perishableProps": {
       "freshHours": { "avg": 36 },
       "transitionHours": { "avg": 24 },
@@ -39,7 +39,7 @@
     }
   },
   {
-    "code": "bloclasses-stinkbait-doughx1",
+    "code": "bloclasses-stinkbait-dough-vanillafennelx1",
     "perishableProps": {
       "freshHours": { "avg": 36 },
       "transitionHours": { "avg": 24 },
@@ -78,7 +78,7 @@
     }
   },
   {
-    "code": "bloclasses-stinkbait-doughx1",
+    "code": "bloclasses-stinkbait-dough-vanilladoughx1",
     "perishableProps": {
       "freshHours": { "avg": 36 },
       "transitionHours": { "avg": 24 },
@@ -164,7 +164,7 @@
       "freshHours": { "avg": 36 },
       "transitionHours": { "avg": 24 },
       "transitionRatio": 0.1,
-      "transitionedStack": { "type": "item", "code": "rot" }
+      "transitionedStack": { "type": "item", "code": "game:rot" }
     },
     "shape": { "base": "game:block/food/meal/liquid" },
     "ingredients": [

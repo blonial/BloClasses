@@ -86,7 +86,7 @@
       "requiresContainer": false,
       "smeltedStack": {
         "type": "block",
-        "code": "gabloclassesme:crock-fire-fired"
+        "code": "bloclasses:crock-fire-fired"
       }
     },
     "crock-blue-raw": {

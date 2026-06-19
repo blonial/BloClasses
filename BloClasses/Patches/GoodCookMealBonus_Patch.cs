@@ -9,17 +9,20 @@ namespace BloClasses.Patches
 {
     public static class GoodCookMealBonus_Patch
     {
-        private const string SaturationMultiplierAttribute = "bloclassesCookedFoodSaturationMul";
-        private const string PerishTimeMultiplierAttribute = "bloclassesCookedFoodPerishTimeMul";
-
         [HarmonyPatch(typeof(BlockCookingContainer), nameof(BlockCookingContainer.DoSmelt))]
         public static class CookingContainerDoSmeltPatch
         {
-            public static void Prefix(BlockCookingContainer __instance, out GoodCookMealBonus? __state)
+            public static void Prefix(BlockCookingContainer __instance, ItemSlot inputSlot, out GoodCookMealBonus? __state)
             {
                 __state = null;
 
                 if (__instance is not CustomBlockCookingContainer cookingContainer)
+                {
+                    return;
+                }
+
+                __state = GetBonusFromStack(inputSlot.Itemstack);
+                if (__state != null)
                 {
                     return;
                 }
@@ -106,12 +109,12 @@ namespace BloClasses.Patches
         {
             if (bonus.SaturationMultiplier != 1f)
             {
-                stack.Attributes.SetFloat(SaturationMultiplierAttribute, bonus.SaturationMultiplier);
+                stack.Attributes.SetFloat(CustomBlockCookingContainer.CookedFoodSaturationMultiplierAttribute, bonus.SaturationMultiplier);
             }
 
             if (bonus.PerishTimeMultiplier != 1f)
             {
-                stack.Attributes.SetFloat(PerishTimeMultiplierAttribute, bonus.PerishTimeMultiplier);
+                stack.Attributes.SetFloat(CustomBlockCookingContainer.CookedFoodPerishTimeMultiplierAttribute, bonus.PerishTimeMultiplier);
             }
         }
 
@@ -149,17 +152,32 @@ namespace BloClasses.Patches
 
         private static float GetSaturationMultiplier(ItemStack? containerStack, ItemStack[]? contentStacks)
         {
-            float multiplier = containerStack?.Attributes.GetFloat(SaturationMultiplierAttribute, 1f) ?? 1f;
+            float multiplier = containerStack?.Attributes.GetFloat(CustomBlockCookingContainer.CookedFoodSaturationMultiplierAttribute, 1f) ?? 1f;
 
             if (contentStacks != null)
             {
                 foreach (ItemStack contentStack in contentStacks)
                 {
-                    multiplier = Math.Max(multiplier, contentStack?.Attributes.GetFloat(SaturationMultiplierAttribute, 1f) ?? 1f);
+                    multiplier = Math.Max(multiplier, contentStack?.Attributes.GetFloat(CustomBlockCookingContainer.CookedFoodSaturationMultiplierAttribute, 1f) ?? 1f);
                 }
             }
 
             return multiplier;
+        }
+
+        private static GoodCookMealBonus? GetBonusFromStack(ItemStack? itemStack)
+        {
+            if (itemStack == null)
+            {
+                return null;
+            }
+
+            float saturationMultiplier = itemStack.Attributes.GetFloat(CustomBlockCookingContainer.CookedFoodSaturationMultiplierAttribute, 1f);
+            float perishTimeMultiplier = itemStack.Attributes.GetFloat(CustomBlockCookingContainer.CookedFoodPerishTimeMultiplierAttribute, 1f);
+
+            return saturationMultiplier == 1f && perishTimeMultiplier == 1f
+                ? null
+                : new GoodCookMealBonus(saturationMultiplier, perishTimeMultiplier);
         }
 
         private static float GetTimeMultiplierFromStat(float statValue)

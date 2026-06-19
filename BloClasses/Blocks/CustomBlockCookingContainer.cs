@@ -10,6 +10,10 @@ namespace BloClasses.Blocks
 {
     public class CustomBlockCookingContainer : BlockCookingContainer
     {
+        public const string LastTouchedPlayerTraitsAttribute = "bloclassesLastTouchedPlayerTraits";
+        public const string CookedFoodSaturationMultiplierAttribute = "bloclassesCookedFoodSaturationMul";
+        public const string CookedFoodPerishTimeMultiplierAttribute = "bloclassesCookedFoodPerishTimeMul";
+
         private static readonly FieldInfo? MaxServingSizeField = FindInstanceField(typeof(CustomBlockCookingContainer), "maxServingSize");
 
         public IPlayer? LastTouchingPlayer;
@@ -59,12 +63,13 @@ namespace BloClasses.Blocks
         public override bool TryPlaceBlock(IWorldAccessor world, IPlayer byPlayer, ItemStack itemstack, BlockSelection blockSel, ref string failureCode)
         {
             LastTouchingPlayer = byPlayer;
+            RememberPlayerOnStack(itemstack, byPlayer);
             return base.TryPlaceBlock(world, byPlayer, itemstack, blockSel, ref failureCode);
         }
 
         public override bool CanSmelt(IWorldAccessor world, ISlotProvider cookingSlotsProvider, ItemStack inputStack, ItemStack outputStack)
         {
-            if (!DoesPlayerMeetTraitRequirement(world, cookingSlotsProvider))
+            if (!DoesPlayerMeetTraitRequirement(world, cookingSlotsProvider, inputStack))
             {
                 return false;
             }
@@ -85,7 +90,7 @@ namespace BloClasses.Blocks
                 return null;
             }
 
-            if (!DoesPlayerMeetTraitRequirement(world, cookingSlotsProvider))
+            if (!DoesPlayerMeetTraitRequirement(world, cookingSlotsProvider, inputSlot.Itemstack))
             {
                 foreach (var item in cookingSlotsProvider.Slots)
                 {
@@ -100,24 +105,72 @@ namespace BloClasses.Blocks
             return base.GetOutputText(world, cookingSlotsProvider, inputSlot);
         }
 
-        private bool DoesPlayerMeetTraitRequirement(IWorldAccessor world, ISlotProvider cookingSlotsProvider)
+        public static void RememberPlayerOnStack(ItemStack? itemStack, IPlayer player)
         {
-            if (LastTouchingPlayer == null)
+            if (itemStack?.Collectible is not CustomBlockCookingContainer cookingBlock)
             {
-                return false;
+                return;
             }
 
+            cookingBlock.LastTouchingPlayer = player;
+
+            var charSystem = player.Entity.World.Api.ModLoader.GetModSystem<CharacterSystem>();
+            string characterClassCode = player.Entity.WatchedAttributes.GetString("characterClass");
+            var charClass = charSystem?.characterClasses.Find(c => c.Code == characterClassCode);
+            string[] traits = charClass?.Traits?.ToArray() ?? Array.Empty<string>();
+
+            itemStack.Attributes.SetString(LastTouchedPlayerTraitsAttribute, string.Join("|", traits));
+            SetOrRemoveFloat(itemStack, CookedFoodSaturationMultiplierAttribute, player.Entity.Stats.GetBlended("cookedFoodSaturation"));
+            SetOrRemoveFloat(itemStack, CookedFoodPerishTimeMultiplierAttribute, GetTimeMultiplierFromStat(player.Entity.Stats.GetBlended("cookedFoodPerishTime")));
+        }
+
+        private static void SetOrRemoveFloat(ItemStack itemStack, string attribute, float value)
+        {
+            if (value == 0f || value == 1f)
+            {
+                itemStack.Attributes.RemoveAttribute(attribute);
+                return;
+            }
+
+            itemStack.Attributes.SetFloat(attribute, value);
+        }
+
+        private static float GetTimeMultiplierFromStat(float statValue)
+        {
+            if (statValue == 0f || statValue == 1f)
+            {
+                return 1f;
+            }
+
+            return statValue < 1f ? 1f + (1f - statValue) : statValue;
+        }
+
+        private bool DoesPlayerMeetTraitRequirement(IWorldAccessor world, ISlotProvider cookingSlotsProvider, ItemStack inputStack)
+        {
             var cookingRecipe = GetMatchingCookingRecipe(world, GetCookingStacks(cookingSlotsProvider, clone: false), out var quantityServings);
             if (cookingRecipe != null && cookingRecipe.Code != null)
             {
                 var cookingRecipesTraitRequirement = world.Api.GetCookingRecipeTraitRequirementByCookinRecipeCode(cookingRecipe.Code);
                 if (cookingRecipesTraitRequirement != null && cookingRecipesTraitRequirement.RequiresTrait != null)
                 {
+                    if (LastTouchingPlayer == null)
+                    {
+                        return StackHasTrait(inputStack, cookingRecipesTraitRequirement.RequiresTrait);
+                    }
+
                     return TraitRequirementUtil.PlayerHasTrait(LastTouchingPlayer, cookingRecipesTraitRequirement.RequiresTrait);
                 }
             }
 
             return true;
+        }
+
+        private static bool StackHasTrait(ItemStack itemStack, string requiredTrait)
+        {
+            string traits = itemStack.Attributes.GetString(LastTouchedPlayerTraitsAttribute, string.Empty);
+            return traits
+                .Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries)
+                .Contains(requiredTrait);
         }
     }
 }

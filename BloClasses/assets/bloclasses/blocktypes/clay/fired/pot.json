@@ -105,7 +105,7 @@
     "fruit-blackberry": { "base": "game:block/food/pie/fill-blackberry" },
     "fruit-cactusfruit": { "base": "game:block/food/pie/fill-cactusfruit" },
     "fruit-cloudberry": { "base": "game:block/food/pie/fill-cloudberry" },
-    "fruit-gooseberry": { "base": "block/food/pie/fill-gooseberry" },
+    "fruit-gooseberry": { "base": "game:block/food/pie/fill-gooseberry" },
     "fruit-guava": { "base": "game:block/food/pie/fill-guava" },
     "fruit-kumquat": { "base": "game:block/food/pie/fill-kumquat" },
     "fruit-plumnatal": { "base": "game:block/food/pie/fill-plumnatal" },
@@ -181,8 +181,8 @@
       "maxServingSize": 9,
       "dirtiedBlockCode": "game:dirtyclaypot-{color}-cooked"
     },
-    "claypot-blue-cooked": {
-      "emptiedBlockCode": "bloclasses:claypot-blue-fired",
+    "*-cooked": {
+      "emptiedBlockCode": "bloclasses:claypot-{color}-fired",
       "allowHeating": true,
       "handleCookingContainerInteract": true,
       "textureMapping": {
@@ -317,11 +317,6 @@
         "mushroom-shiitake-normal-north": ["vegetable", "group7"],
         "mushroom-witchhat-normal": ["vegetable", "group7"]
       }
-    },
-    "*-cooked": {
-      "emptiedBlockCode": "bloclasses:claypot-{color}-fired",
-      "allowHeating": true,
-      "handleCookingContainerInteract": true
     }
   },
   "doNotRenderAtLod2": true,
