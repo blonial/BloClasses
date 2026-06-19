@@ -1,7 +1,7 @@
 {
   "code": "clothier-backpack",
   "maxstacksize": 1,
-  "shape": { "base": "game:item/bag/linensack" },
+  "shape": { "base": "bloclasses:item/bag/clothier-backpack" },
   "behaviors": [
     {
       "name": "GroundStorable",
@@ -25,33 +25,29 @@
       }
     }
   ],
-  "textures": {
-    "linen": { "base": "game:item/bag/linensack/linen" },
-    "top": { "base": "game:item/bag/linensack/top" }
+  "attributes": {
+    "backpack": {
+      "quantitySlots": 7
+    }
   },
   "storageFlags": 2,
   "creativeinventory": { "general": ["*"], "items": ["*"] },
   "guiTransform": {
     "translation": { "x": 0, "y": 0, "z": 0 },
-    "rotation": { "x": -25, "y": 23, "z": 180 },
-    "origin": { "x": 0.5299, "y": 0.23, "z": 0.5 },
-    "scale": 2.7,
+    "rotation": { "x": -20, "y": 21, "z": 180 },
+    "origin": { "x": 0.53, "y": 0.35, "z": 0.5 },
+    "scale": 2.3,
     "rotate": true
   },
   "tpHandTransform": {
-    "translation": { "x": -0.7, "y": -0.5, "z": -0.6 },
-    "rotation": { "x": -4, "y": 47, "z": -17 },
-    "scale": 0.81
+    "translation": { "x": -0.61, "y": -0.67, "z": -0.65 },
+    "rotation": { "x": -6, "y": 1, "z": 3 },
+    "scale": 0.86
   },
   "groundTransform": {
     "translation": { "x": 0, "y": 0, "z": 0 },
     "rotation": { "x": 180, "y": 33, "z": -180 },
     "origin": { "x": 0.5, "y": 0, "z": 0.5 },
-    "scale": 4
-  },
-  "attributes": {
-    "backpack": {
-      "quantitySlots": 7
-    }
+    "scale": 4.5
   }
 }
