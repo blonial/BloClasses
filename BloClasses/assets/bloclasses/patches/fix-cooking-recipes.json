@@ -529,52 +529,52 @@
     "value": [
       {
         "type": "item",
-        "code": "vegetable-cabbage",
+        "code": "bloclasses:vegetable-cabbage",
         "shapeElement": "game:bowl/vegetable game:base game:3/*"
       },
       {
         "type": "item",
-        "code": "vegetable-carrot",
+        "code": "bloclasses:vegetable-carrot",
         "shapeElement": "game:bowl/vegetable game:base game:3/*"
       },
       {
         "type": "item",
-        "code": "vegetable-onion",
+        "code": "bloclasses:vegetable-onion",
         "shapeElement": "game:bowl/vegetable game:base game:3/*"
       },
       {
         "type": "item",
-        "code": "vegetable-parsnip",
+        "code": "bloclasses:vegetable-parsnip",
         "shapeElement": "game:bowl/vegetable game:base game:3/*"
       },
       {
         "type": "item",
-        "code": "vegetable-turnip",
+        "code": "bloclasses:vegetable-turnip",
         "shapeElement": "game:bowl/vegetable game:base game:3/*"
       },
       {
         "type": "item",
-        "code": "vegetable-pumpkin",
+        "code": "bloclasses:vegetable-pumpkin",
         "shapeElement": "game:bowl/vegetable game:base game:3/*"
       },
       {
         "type": "item",
-        "code": "vegetable-cassava",
+        "code": "bloclasses:vegetable-cassava",
         "shapeElement": "game:bowl/vegetable game:base game:3/*"
       },
       {
         "type": "item",
-        "code": "pickledvegetable-*",
+        "code": "bloclasses:pickledvegetable-*",
         "shapeElement": "game:bowl/vegetable game:base game:3/*"
       },
       {
         "type": "item",
-        "code": "pickledlegume-soybean",
+        "code": "bloclasses:pickledlegume-soybean",
         "shapeElement": "game:bowl/vegetable game:base game:3/*"
       },
       {
         "type": "item",
-        "code": "vegetable-fennel",
+        "code": "bloclasses:vegetable-fennel",
         "shapeElement": "game:bowl/vegetable game:base game:3/*"
       }
     ],

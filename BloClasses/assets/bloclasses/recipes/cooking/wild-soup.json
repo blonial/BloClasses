@@ -1,0 +1,416 @@
+{
+  "code": "wild-soup",
+  "requiresTrait": "bcgourmet",
+  "perishableProps": {
+    "freshHours": { "avg": 144 },
+    "transitionHours": { "avg": 36 },
+    "transitionRatio": 1,
+    "transitionedStack": { "type": "item", "code": "game:rot" }
+  },
+  "shape": { "base": "game:block/food/meal/soup" },
+  "ingredients": [
+    {
+      "code": "stock",
+      "validStacks": [
+        {
+          "type": "item",
+          "code": "game:waterportion",
+          "shapeElement": "game:bowl/water"
+        }
+      ],
+      "minQuantity": 1,
+      "maxQuantity": 1,
+      "portionSizeLitres": 1,
+      "typeName": "stock"
+    },
+    {
+      "code": "vegetable-base",
+      "validStacks": [
+        {
+          "type": "item",
+          "code": "game:vegetable-cabbage",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-carrot",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-onion",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-parsnip",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-turnip",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-pumpkin",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-cassava",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-bellpepper",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "game:mushroom-*",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "game:pickledvegetable-*",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "game:pickledlegume-soybean",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-olive",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-fennel",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-cabbage",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-carrot",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-onion",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-parsnip",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-turnip",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-pumpkin",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-cassava",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:pickledvegetable-*",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:pickledlegume-soybean",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-fennel",
+          "shapeElement": "game:bowl/vegetable game:base game:1/*"
+        }
+      ],
+      "minQuantity": 1,
+      "maxQuantity": 1,
+      "typeName": "vegetable"
+    },
+    {
+      "code": "vegetable-extra",
+      "validStacks": [
+        {
+          "type": "item",
+          "code": "game:vegetable-cabbage",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-carrot",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-onion",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-parsnip",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-turnip",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-pumpkin",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-cassava",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-bellpepper",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "game:mushroom-*",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "game:pickledvegetable-*",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "game:pickledlegume-soybean",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-olive",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-fennel",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-cabbage",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-carrot",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-onion",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-parsnip",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-turnip",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-pumpkin",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-cassava",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:pickledvegetable-*",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:pickledlegume-soybean",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-fennel",
+          "shapeElement": "game:bowl/vegetable game:base game:2/*"
+        }
+      ],
+      "minQuantity": 0,
+      "maxQuantity": 1,
+      "typeName": "vegetable"
+    },
+    {
+      "code": "vegetable-extra2",
+      "validStacks": [
+        {
+          "type": "item",
+          "code": "game:vegetable-cabbage",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-carrot",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-onion",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-parsnip",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-turnip",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-pumpkin",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-cassava",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-bellpepper",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "game:mushroom-*",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "game:pickledvegetable-*",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "game:pickledlegume-soybean",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-olive",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "game:vegetable-fennel",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-cabbage",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-carrot",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-onion",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-parsnip",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-turnip",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-pumpkin",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-cassava",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:pickledvegetable-*",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:pickledlegume-soybean",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:vegetable-fennel",
+          "shapeElement": "game:bowl/vegetable game:base game:3/*"
+        }
+      ],
+      "minQuantity": 0,
+      "maxQuantity": 1,
+      "typeName": "vegetable"
+    },
+    {
+      "code": "protein-extra",
+      "validStacks": [
+        {
+          "type": "item",
+          "code": "game:bushmeat-raw",
+          "shapeElement": "game:bowl/meat game:stew/*",
+          "textureMapping": ["meat", "group6"]
+        },
+        {
+          "type": "item",
+          "code": "game:bushmeat-cured",
+          "shapeElement": "game:bowl/meat game:stew/*",
+          "textureMapping": ["meat", "group6"]
+        }
+      ],
+      "minQuantity": 1,
+      "maxQuantity": 1,
+      "typeName": "protein"
+    }
+  ]
+}
