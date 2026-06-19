@@ -1,7 +1,7 @@
 using System;
+using System.Reflection;
 using System.Text;
 using HarmonyLib;
-using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.GameContent;
@@ -121,10 +121,7 @@ namespace BloClasses.Patches
                 player = inventory.Player;
             }
 
-            if (player == null && world is IClientWorldAccessor clientWorld)
-            {
-                player = clientWorld.Player;
-            }
+            player ??= GetClientWorldPlayer(world);
 
             if (player == null)
             {
@@ -134,6 +131,12 @@ namespace BloClasses.Patches
             return HasTrait(player, MetallurgistTrait)
                 ? MetallurgistQuenchBreakChancePerIteration
                 : DefaultQuenchBreakChancePerIteration;
+        }
+
+        private static IPlayer? GetClientWorldPlayer(IWorldAccessor? world)
+        {
+            PropertyInfo? playerProperty = world?.GetType().GetProperty("Player");
+            return playerProperty?.GetValue(world) as IPlayer;
         }
 
         private static float GetContextualShatterChance(ItemStack itemstack)

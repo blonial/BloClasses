@@ -36,42 +36,9 @@ namespace BloClasses.Patches
         [HarmonyPatch]
         public static class GiveForgedToolHeadPatch
         {
-            public static IEnumerable<MethodBase> TargetMethods()
+            public static MethodBase? TargetMethod()
             {
-                foreach (Assembly assembly in AppDomain.CurrentDomain.GetAssemblies())
-                {
-                    Type[] types;
-                    try
-                    {
-                        types = assembly.GetTypes();
-                    }
-                    catch (ReflectionTypeLoadException exception)
-                    {
-                        types = exception.Types.Where(type => type != null).Cast<Type>().ToArray();
-                    }
-
-                    foreach (Type type in types)
-                    {
-                        if (type.IsInterface || type.IsAbstract)
-                        {
-                            continue;
-                        }
-
-                        foreach (MethodInfo method in type.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
-                        {
-                            ParameterInfo[] parameters = method.GetParameters();
-                            if (
-                                !method.IsAbstract
-                                && method.Name == "TryGiveItemstack"
-                                && parameters.Length > 0
-                                && parameters[0].ParameterType == typeof(ItemStack)
-                            )
-                            {
-                                yield return method;
-                            }
-                        }
-                    }
-                }
+                return AccessTools.Method(typeof(IPlayerInventoryManager), nameof(IPlayerInventoryManager.TryGiveItemstack), new[] { typeof(ItemStack), typeof(bool) });
             }
 
             public static void Prefix(object[] __args)
