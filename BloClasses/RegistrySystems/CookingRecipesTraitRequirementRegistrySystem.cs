@@ -1,13 +1,12 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using BloClasses.Networking;
-using BloClasses.RegistrySystems;
 using System.Collections.Generic;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Server;
 
-namespace BloClasses.RecipeRegistrySystems
+namespace BloClasses.RegistrySystems
 {
     public class CookingRecipesTraitRequirementRegistrySystem : ModSystem
     {

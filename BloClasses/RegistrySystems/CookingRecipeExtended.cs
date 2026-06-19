@@ -3,7 +3,7 @@ using Vintagestory.API;
 using Vintagestory.API.Common;
 using Vintagestory.GameContent;
 
-namespace BloClasses.RecipeRegistrySystems
+namespace BloClasses.RegistrySystems
 {
     [DocumentAsJson]
     public class CookingRecipeExtended : CookingRecipe
