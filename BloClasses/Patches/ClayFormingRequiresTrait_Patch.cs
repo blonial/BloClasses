@@ -149,8 +149,14 @@ namespace BloClasses.Patches
                 return false;
             }
 
-            return MatchesNormalizedOutputCode(recipeOutputCode, outputCode)
-                || MatchesNormalizedOutputCode(WithoutDomain(recipeOutputCode), WithoutDomain(outputCode));
+            if (MatchesNormalizedOutputCode(recipeOutputCode, outputCode))
+            {
+                return true;
+            }
+
+            return !HasDomain(recipeOutputCode) || !HasDomain(outputCode)
+                ? MatchesNormalizedOutputCode(WithoutDomain(recipeOutputCode), WithoutDomain(outputCode))
+                : false;
         }
 
         private static bool MatchesNormalizedOutputCode(string patternCode, string outputCode)
@@ -164,6 +170,11 @@ namespace BloClasses.Patches
         {
             int separatorIndex = code.IndexOf(':');
             return separatorIndex < 0 ? code : code[(separatorIndex + 1)..];
+        }
+
+        private static bool HasDomain(string code)
+        {
+            return code.IndexOf(':') >= 0;
         }
     }
 }

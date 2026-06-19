@@ -5,7 +5,7 @@
   "name": "BloClasses",
   "authors": ["blonial"],
   "description": "A Vintage Story mod that introduces new balanced character classes and reworks existing ones.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "side": "Universal",
   "requiredOnClient": true,
   "requiredOnServer": true,
