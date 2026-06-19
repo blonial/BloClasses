@@ -30,9 +30,9 @@
     },
     "nutritionPropsWhenInMeal": {
       "satietyByType": {
-        "*-flax": 120,
-        "*-rice": 280,
-        "*": 240
+        "*-flax": 72,
+        "*-rice": 168,
+        "*": 144
       },
       "foodcategory": "Grain"
     },
@@ -53,9 +53,9 @@
   "creativeinventory": { "general": ["*"], "items": ["*"] },
   "nutritionProps": {
     "satietyByType": {
-      "*-flax": 60,
-      "*-rice": 150,
-      "*": 120
+      "*-flax": 36,
+      "*-rice": 90,
+      "*": 72
     },
     "foodcategory": "Grain"
   },

@@ -1,6 +1,6 @@
 {
   "ingredientPattern": "LSL\t_L_",
-  "requiresTrait": "bcpathfinder",
+  "requiresTrait": "bcroadworker",
   "ingredients": {
     "S": { "type": "block", "code": "game:soil-*" },
     "L": {

@@ -30,7 +30,7 @@
     },
     "nutritionPropsWhenInMeal": {
       "satietyByType": {
-        "*": 240
+        "*": 144
       },
       "foodcategory": "Fruit"
     },
@@ -93,7 +93,7 @@
   "maxstacksize": 64,
   "materialDensityByType": {},
   "nutritionPropsByType": {
-    "*": { "satiety": 160, "foodcategory": "Fruit" }
+    "*": { "satiety": 96, "foodcategory": "Fruit" }
   },
   "transitionablePropsByType": {
     "*": [

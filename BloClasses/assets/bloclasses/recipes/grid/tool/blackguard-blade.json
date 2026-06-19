@@ -1,0 +1,24 @@
+[
+  {
+    "ingredientPattern": "TC\tS_",
+    "requiresTrait": "bcmerciless",
+    "ingredients": {
+      "T": {
+        "type": "item",
+        "code": "game:bladehead-short-*",
+        "name": "metal",
+        "allowedVariants": ["meteoriciron", "steel"]
+      },
+      "S": { "type": "item", "code": "game:stick" },
+      "C": { "type": "item", "code": "game:charcoal" }
+    },
+    "width": 2,
+    "height": 2,
+    "output": {
+      "type": "item",
+      "code": "game:blade-blackguard-{metal}",
+      "quantity": 1,
+      "recipeAttributes": { "applyquenchablebuffs": true }
+    }
+  }
+]

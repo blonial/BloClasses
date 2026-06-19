@@ -1,6 +1,6 @@
 {
   "ingredientPattern": "LLL\tLCL\tLCL",
-  "requiresTrait": "bcpathfinder",
+  "requiresTrait": "bcpaver",
   "ingredients": {
     "C": { "type": "item", "code": "game:mortar" },
     "L": {

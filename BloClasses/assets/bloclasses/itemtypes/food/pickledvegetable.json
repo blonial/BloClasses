@@ -38,9 +38,9 @@
   },
   "creativeinventory": { "general": ["*"], "items": ["*"] },
   "nutritionPropsByType": {
-    "*-cabbage": { "satiety": 500, "foodcategory": "Vegetable" },
-    "*-fennel": { "satiety": 80, "foodcategory": "Vegetable" },
-    "*": { "satiety": 160, "foodcategory": "Vegetable" }
+    "*-cabbage": { "satiety": 300, "foodcategory": "Vegetable" },
+    "*-fennel": { "satiety": 48, "foodcategory": "Vegetable" },
+    "*": { "satiety": 96, "foodcategory": "Vegetable" }
   },
   "transitionableProps": [
     {

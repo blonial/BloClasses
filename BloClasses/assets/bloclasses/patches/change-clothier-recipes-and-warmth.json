@@ -1,0 +1,230 @@
+[
+  { "op": "replace", "path": "/0/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/armor/tailoredgambeson.json" },
+  { "op": "replace", "path": "/1/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/armor/tailoredgambeson.json" },
+  { "op": "replace", "path": "/2/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/armor/tailoredgambeson.json" },
+  { "op": "replace", "path": "/0/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/armorrepair/tailoredgambeson.json" },
+  { "op": "replace", "path": "/1/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/armorrepair/tailoredgambeson.json" },
+  { "op": "replace", "path": "/2/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/armorrepair/tailoredgambeson.json" },
+
+  { "op": "replace", "path": "/0/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/blanket.json" },
+  { "op": "replace", "path": "/1/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/blanket.json" },
+  { "op": "replace", "path": "/2/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/blanket.json" },
+  { "op": "replace", "path": "/4/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/blanket.json" },
+  { "op": "replace", "path": "/8/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/blanket.json" },
+  { "op": "replace", "path": "/9/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/blanket.json" },
+
+  { "op": "replace", "path": "/4/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/foot.json" },
+  { "op": "replace", "path": "/5/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/foot.json" },
+  { "op": "replace", "path": "/6/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/foot.json" },
+  { "op": "replace", "path": "/7/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/foot.json" },
+  { "op": "replace", "path": "/8/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/foot.json" },
+  { "op": "replace", "path": "/9/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/foot.json" },
+  { "op": "replace", "path": "/12/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/foot.json" },
+  { "op": "replace", "path": "/20/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/foot.json" },
+  { "op": "replace", "path": "/21/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/foot.json" },
+
+  { "op": "replace", "path": "/4/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/hand.json" },
+  { "op": "replace", "path": "/5/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/hand.json" },
+  { "op": "replace", "path": "/6/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/hand.json" },
+  { "op": "replace", "path": "/7/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/hand.json" },
+  { "op": "replace", "path": "/8/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/hand.json" },
+  { "op": "replace", "path": "/9/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/hand.json" },
+  { "op": "replace", "path": "/10/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/hand.json" },
+  { "op": "replace", "path": "/11/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/hand.json" },
+  { "op": "replace", "path": "/18/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/hand.json" },
+
+  { "op": "replace", "path": "/13/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/head.json" },
+  { "op": "replace", "path": "/14/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/head.json" },
+  { "op": "replace", "path": "/18/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/head.json" },
+
+  { "op": "replace", "path": "/4/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/lowerbody.json" },
+  { "op": "replace", "path": "/5/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/lowerbody.json" },
+  { "op": "replace", "path": "/6/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/lowerbody.json" },
+  { "op": "replace", "path": "/7/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/lowerbody.json" },
+  { "op": "replace", "path": "/8/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/lowerbody.json" },
+  { "op": "replace", "path": "/9/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/lowerbody.json" },
+  { "op": "replace", "path": "/10/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/lowerbody.json" },
+  { "op": "replace", "path": "/11/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/lowerbody.json" },
+  { "op": "replace", "path": "/24/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/lowerbody.json" },
+  { "op": "replace", "path": "/25/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/lowerbody.json" },
+  { "op": "replace", "path": "/28/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/lowerbody.json" },
+  { "op": "replace", "path": "/34/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/lowerbody.json" },
+  { "op": "replace", "path": "/35/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/lowerbody.json" },
+  { "op": "replace", "path": "/36/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/lowerbody.json" },
+
+  { "op": "replace", "path": "/10/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/shoulder.json" },
+  { "op": "replace", "path": "/11/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/shoulder.json" },
+  { "op": "replace", "path": "/12/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/shoulder.json" },
+  { "op": "replace", "path": "/15/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/shoulder.json" },
+  { "op": "replace", "path": "/16/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/shoulder.json" },
+  { "op": "replace", "path": "/22/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/shoulder.json" },
+  { "op": "replace", "path": "/23/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/shoulder.json" },
+  { "op": "replace", "path": "/24/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/shoulder.json" },
+
+  { "op": "replace", "path": "/4/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbody.json" },
+  { "op": "replace", "path": "/5/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbody.json" },
+  { "op": "replace", "path": "/6/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbody.json" },
+  { "op": "replace", "path": "/7/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbody.json" },
+  { "op": "replace", "path": "/8/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbody.json" },
+  { "op": "replace", "path": "/9/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbody.json" },
+  { "op": "replace", "path": "/10/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbody.json" },
+  { "op": "replace", "path": "/11/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbody.json" },
+  { "op": "replace", "path": "/14/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbody.json" },
+  { "op": "replace", "path": "/15/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbody.json" },
+  { "op": "replace", "path": "/16/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbody.json" },
+  { "op": "replace", "path": "/17/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbody.json" },
+  { "op": "replace", "path": "/18/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbody.json" },
+  { "op": "replace", "path": "/19/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbody.json" },
+  { "op": "replace", "path": "/20/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbody.json" },
+  { "op": "replace", "path": "/21/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbody.json" },
+  { "op": "replace", "path": "/22/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbody.json" },
+  { "op": "replace", "path": "/29/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbody.json" },
+
+  { "op": "replace", "path": "/4/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbodyover.json" },
+  { "op": "replace", "path": "/5/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbodyover.json" },
+  { "op": "replace", "path": "/6/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbodyover.json" },
+  { "op": "replace", "path": "/7/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbodyover.json" },
+  { "op": "replace", "path": "/8/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbodyover.json" },
+  { "op": "replace", "path": "/9/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbodyover.json" },
+  { "op": "replace", "path": "/10/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbodyover.json" },
+  { "op": "replace", "path": "/11/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbodyover.json" },
+  { "op": "replace", "path": "/12/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbodyover.json" },
+  { "op": "replace", "path": "/15/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbodyover.json" },
+  { "op": "replace", "path": "/16/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbodyover.json" },
+  { "op": "replace", "path": "/22/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbodyover.json" },
+  { "op": "replace", "path": "/23/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbodyover.json" },
+  { "op": "replace", "path": "/24/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/upperbodyover.json" },
+
+  { "op": "replace", "path": "/1/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/waist.json" },
+  { "op": "replace", "path": "/2/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/clothes/waist.json" },
+
+  { "op": "replace", "path": "/1/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/linen.json" },
+  { "op": "replace", "path": "/2/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/linen.json" },
+  { "op": "replace", "path": "/3/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/linen.json" },
+  { "op": "replace", "path": "/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/sewingkit.json" },
+
+  { "op": "replace", "path": "/4/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/5/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/6/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/7/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/8/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/9/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/10/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/11/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/12/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/13/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/14/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/17/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/18/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/19/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/20/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/21/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/22/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/23/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/24/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/25/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/26/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+  { "op": "replace", "path": "/27/requiresTrait", "value": "bcclothier", "file": "game:recipes/grid/tool/roundshield.json" },
+
+  {
+    "op": "addmerge",
+    "path": "/attributes/warmthByType",
+    "value": {
+      "*-arcticfisher": 3.5,
+      "*-embroideredfur": 3.5,
+      "*-nomad-boots": 1.5,
+      "*-fur-lined-reindeer-herder-shoes": 4.5
+    },
+    "file": "game:itemtypes/wearable/seraph/foot.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/attributesByType",
+    "value": {
+      "*-arcticfisher": { "warmth": 2 },
+      "*-embroideredfur": { "warmth": 2 },
+      "*-minstrel-gloves": { "warmth": 1 }
+    },
+    "file": "game:itemtypes/wearable/seraph/hand.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/attributesByType",
+    "value": {
+      "*-minstrel-hat": { "warmth": 1.5 },
+      "*-fortune-tellers-scarf": { "warmth": 1.5 },
+      "*-tophat": { "warmth": 1.5 }
+    },
+    "file": "game:itemtypes/wearable/seraph/head.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/attributesByType",
+    "value": {
+      "*-arcticfisher": { "warmth": 4.5 },
+      "*-embroideredfur": { "warmth": 4.5 },
+      "*-reindeer-herder-trousers": { "warmth": 2.5 },
+      "*-fine-trousers": { "warmth": 2.5 },
+      "*-nomad-trousers": { "warmth": 2.5 },
+      "*-pastoral-pants": { "warmth": 3 },
+      "*-chateau-pants": { "warmth": 3 },
+      "*-minstrel-pants": { "warmth": 2.5 }
+    },
+    "file": "game:itemtypes/wearable/seraph/lowerbody.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/attributes/warmthByType",
+    "value": {
+      "*-shawlmoth": 1.5,
+      "*-shawlhawk": 1.5,
+      "*-apron*": 1.5,
+      "*-embroidered-tartarean-scarf": 1.5,
+      "*-mooncloth-robe": 1.5,
+      "*-longsleeve-pearl-moonrobe": 1.5,
+      "*-shortsleeve-pearl-moonrobe": 1.5,
+      "*-minstrel-coat": 2.5
+    },
+    "file": "game:itemtypes/wearable/seraph/shoulder.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/attributesByType",
+    "value": {
+      "*-arcticfisher": { "warmth": 4 },
+      "*-embroideredfur": { "warmth": 4 },
+      "*-chemisesleeveless": { "warmth": 2.5 },
+      "*-chemiseshort": { "warmth": 2.5 },
+      "*-chemiseshouldershort": { "warmth": 2.5 },
+      "*-chemiselong": { "warmth": 2.5 },
+      "*-chemisescoop": { "warmth": 2.5 },
+      "*-chemiseshoulderlong": { "warmth": 2.5 },
+      "*-minstrel-shirt": { "warmth": 2.5 },
+      "*-azure-embroidered-shirt": { "warmth": 2.5 },
+      "*-reindeer-herder-collared-shirt": { "warmth": 4 }
+    },
+    "file": "game:itemtypes/wearable/seraph/upperbody.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/attributesByType",
+    "value": {
+      "*-arcticfisher": { "warmth": 4.5 },
+      "*-embroideredfur": { "warmth": 4.5 },
+      "*-cobalt-mantle": { "warmth": 2.5 },
+      "*-nomad-mantle": { "warmth": 2.5 },
+      "*-spice-merchants-coat": { "warmth": 2.5 },
+      "*-reindeer-herder-fur-coat": { "warmth": 4.5 }
+    },
+    "file": "game:itemtypes/wearable/seraph/upperbodyover.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/attributes/warmthByType",
+    "value": {
+      "*-reindeer-herder-waistband": 0.75,
+      "*-fortune-teller-hip-scarf": 0.75
+    },
+    "file": "game:itemtypes/wearable/seraph/waist.json"
+  }
+]

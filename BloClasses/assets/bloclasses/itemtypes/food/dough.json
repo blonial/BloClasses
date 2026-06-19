@@ -32,9 +32,9 @@
       "partType": "Crust"
     },
     "nutritionPropsWhenInMealByType": {
-      "*-flax": { "satiety": 240, "foodcategory": "Grain" },
-      "*-rice": { "satiety": 560, "foodcategory": "Grain" },
-      "*": { "satiety": 480, "foodcategory": "Grain" }
+      "*-flax": { "satiety": 144, "foodcategory": "Grain" },
+      "*-rice": { "satiety": 336, "foodcategory": "Grain" },
+      "*": { "satiety": 288, "foodcategory": "Grain" }
     }
   },
   "variantgroups": [

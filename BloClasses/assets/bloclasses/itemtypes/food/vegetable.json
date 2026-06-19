@@ -112,7 +112,7 @@
       "foodTags": ["{type}", "tastyvegetable"],
       "inContainerTexture": { "base": "game:block/wood/barrel/raw-{type}" },
       "nutritionPropsWhenInMeal": {
-        "satiety": 900,
+        "satiety": 540,
         "foodcategory": "vegetable"
       },
       "inPieProperties": {
@@ -130,7 +130,7 @@
       "foodTags": ["{type}", "tastyvegetable"],
       "inContainerTexture": { "base": "game:block/wood/barrel/raw-{type}" },
       "nutritionPropsWhenInMeal": {
-        "satiety": 360,
+        "satiety": 216,
         "foodcategory": "vegetable"
       },
       "inPieProperties": {
@@ -148,7 +148,7 @@
       "foodTags": ["{type}"],
       "inContainerTexture": { "base": "game:block/wood/barrel/peeled-{type}" },
       "nutritionPropsWhenInMeal": {
-        "satiety": 240,
+        "satiety": 144,
         "foodcategory": "vegetable"
       },
       "inPieProperties": {
@@ -174,7 +174,7 @@
       "foodTags": ["{type}"],
       "inContainerTexture": { "base": "game:block/wood/barrel/raw-{type}" },
       "nutritionPropsWhenInMeal": {
-        "satiety": 300,
+        "satiety": 180,
         "foodcategory": "vegetable"
       },
       "inPieProperties": {
@@ -196,7 +196,7 @@
       "foodTags": ["{type}"],
       "inContainerTexture": { "base": "game:block/wood/barrel/raw-{type}" },
       "nutritionPropsWhenInMeal": {
-        "satiety": 120,
+        "satiety": 72,
         "foodcategory": "vegetable"
       },
       "inPieProperties": {
@@ -218,7 +218,7 @@
       "foodTags": ["{type}", "tastyvegetable"],
       "inContainerTexture": { "base": "game:block/wood/barrel/raw-{type}" },
       "nutritionPropsWhenInMeal": {
-        "satiety": 300,
+        "satiety": 180,
         "foodcategory": "vegetable"
       },
       "inPieProperties": {
@@ -245,10 +245,10 @@
   },
   "creativeinventory": { "general": ["*"], "items": ["*"] },
   "nutritionPropsByType": {
-    "*-cabbage": { "satiety": 600, "foodcategory": "vegetable" },
-    "*-pumpkin": { "satiety": 280, "foodcategory": "vegetable" },
-    "*-fennel": { "satiety": 100, "foodcategory": "vegetable" },
-    "*": { "satiety": 200, "foodcategory": "vegetable" }
+    "*-cabbage": { "satiety": 360, "foodcategory": "vegetable" },
+    "*-pumpkin": { "satiety": 168, "foodcategory": "vegetable" },
+    "*-fennel": { "satiety": 60, "foodcategory": "vegetable" },
+    "*": { "satiety": 120, "foodcategory": "vegetable" }
   },
   "transitionablePropsByType": {
     "*-pumpkin": [

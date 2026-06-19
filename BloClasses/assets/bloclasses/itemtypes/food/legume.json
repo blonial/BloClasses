@@ -30,8 +30,8 @@
     },
     "nutritionPropsWhenInMeal": {
       "satietyByType": {
-        "*-soybean": 480,
-        "*-peanut": 420
+        "*-soybean": 288,
+        "*-peanut": 252
       },
       "foodcategory": "Protein"
     },
@@ -61,7 +61,7 @@
   ],
   "materialDensity": 600,
   "nutritionPropsByType": {
-    "*-peanut": { "satiety": 320, "foodcategory": "Protein" }
+    "*-peanut": { "satiety": 192, "foodcategory": "Protein" }
   },
   "guiTransformByType": {
     "*-soybean": {

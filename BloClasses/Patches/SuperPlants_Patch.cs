@@ -19,7 +19,7 @@ namespace BloClasses.Patches
             }
 
             var charClass = charSystem.characterClasses.Find(c => c.Code == byPlayer.Entity.WatchedAttributes.GetString("characterClass"));
-            if (charClass == null || !charClass.Traits.Contains("bcsuperplants"))
+            if (charClass == null || !charClass.Traits.Contains("bccropfanatic"))
             {
                 return;
             }

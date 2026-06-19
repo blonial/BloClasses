@@ -1,0 +1,132 @@
+[
+  {
+    "op": "replace",
+    "path": "/1/requiresTrait",
+    "value": "bcmerciless",
+    "file": "game:recipes/grid/tool/blade.json"
+  },
+  {
+    "op": "replace",
+    "path": "/3/requiresTrait",
+    "value": "bcmerciless",
+    "file": "game:recipes/grid/tool/shield.json"
+  },
+  {
+    "op": "replace",
+    "path": "/ingredient/allowedVariants",
+    "value": ["iron", "meteoriciron", "steel"],
+    "file": "game:recipes/smithing/blade-short.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/allowedVariants",
+    "value": ["bladehead-short-meteoriciron", "bladehead-short-steel"],
+    "file": "game:itemtypes/toolhead/bladehead.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/shapeByType",
+    "value": {
+      "bladehead-short-meteoriciron": { "base": "item/tool/blade/blackguard" },
+      "bladehead-short-steel": { "base": "item/tool/blade/blackguard" }
+    },
+    "file": "game:itemtypes/toolhead/bladehead.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/texturesByType",
+    "value": {
+      "bladehead-short-meteoriciron": {
+        "handle": { "base": "block/transparent" },
+        "metal": { "base": "block/metal/ingot/meteoriciron" }
+      },
+      "bladehead-short-steel": {
+        "handle": { "base": "block/transparent" },
+        "metal": { "base": "block/metal/ingot/steel" }
+      }
+    },
+    "file": "game:itemtypes/toolhead/bladehead.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/allowedVariants",
+    "value": ["blade-blackguard-meteoriciron", "blade-blackguard-steel"],
+    "file": "game:itemtypes/tool/blade.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/texturesByType",
+    "value": {
+      "blade-blackguard-meteoriciron": {
+        "handle": { "base": "item/tool/sword-blackguard" },
+        "metal": { "base": "block/metal/ingot/meteoriciron" }
+      },
+      "blade-blackguard-steel": {
+        "handle": { "base": "item/tool/sword-blackguard" },
+        "metal": { "base": "block/metal/ingot/steel" }
+      }
+    },
+    "file": "game:itemtypes/tool/blade.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/attributesByType",
+    "value": {
+      "blade-blackguard-meteoriciron": {
+        "attachableToEntity": {
+          "categoryCode": "weapon1m",
+          "attachedShapeBySlotCode": {
+            "frontrightside": {
+              "base": "item/wearable/hooved/elk/weaponr-blackguard"
+            },
+            "frontleftside": {
+              "base": "item/wearable/hooved/elk/weaponl-blackguard"
+            }
+          }
+        }
+      },
+      "blade-blackguard-steel": {
+        "attachableToEntity": {
+          "categoryCode": "weapon1m",
+          "attachedShapeBySlotCode": {
+            "frontrightside": {
+              "base": "item/wearable/hooved/elk/weaponr-blackguard"
+            },
+            "frontleftside": {
+              "base": "item/wearable/hooved/elk/weaponl-blackguard"
+            }
+          }
+        }
+      }
+    },
+    "file": "game:itemtypes/tool/blade.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/heldTpHitAnimationByType",
+    "value": {
+      "blade-blackguard-meteoriciron": "spearhit",
+      "blade-blackguard-steel": "spearhit"
+    },
+    "file": "game:itemtypes/tool/blade.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/attackpowerbytype",
+    "value": {
+      "blade-blackguard-iron": 5.3,
+      "blade-blackguard-meteoriciron": 5.55,
+      "blade-blackguard-steel": 5.55
+    },
+    "file": "game:itemtypes/tool/blade.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/durabilitybytype",
+    "value": {
+      "blade-blackguard-meteoriciron": 1425,
+      "blade-blackguard-steel": 2750
+    },
+    "file": "game:itemtypes/tool/blade.json"
+  }
+]

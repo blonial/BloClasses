@@ -23,7 +23,7 @@
       "*-raw": { "base": "game:block/wood/barrel/raw-cassava" },
       "*-soaked": { "base": "game:block/wood/barrel/soaked-cassava" }
     },
-    "nutritionPropsWhenInMeal": { "satiety": 240, "foodcategory": "vegetable" },
+    "nutritionPropsWhenInMeal": { "satiety": 144, "foodcategory": "vegetable" },
     "handbook": {
       "extraSections": [
         {

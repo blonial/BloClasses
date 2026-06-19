@@ -45,7 +45,7 @@
   "texture": { "base": "game:item/food/legume/soybeanpickled" },
   "creativeinventory": { "general": ["*"], "items": ["*"] },
   "nutritionPropsByType": {
-    "*": { "satiety": 300, "health": 0, "foodcategory": "Protein" }
+    "*": { "satiety": 180, "health": 0, "foodcategory": "Protein" }
   },
   "transitionableProps": [
     {

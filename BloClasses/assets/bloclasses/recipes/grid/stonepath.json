@@ -1,6 +1,6 @@
 {
   "ingredientPattern": "L\tS\tL",
-  "requiresTrait": "bcpathfinder",
+  "requiresTrait": "bcroadworker",
   "ingredients": {
     "L": { "type": "item", "code": "game:stone-*", "name": "rock" },
     "S": { "type": "block", "code": "game:soil-*" }

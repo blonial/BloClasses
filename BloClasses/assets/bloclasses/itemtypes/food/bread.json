@@ -113,15 +113,15 @@
     }
   },
   "nutritionPropsByType": {
-    "*-flax-partbaked": { "satiety": 140, "foodcategory": "Grain" },
-    "*-flax-perfect": { "satiety": 320, "foodcategory": "Grain" },
-    "*-flax-charred": { "satiety": 200, "foodcategory": "Grain" },
-    "*-rice-partbaked": { "satiety": 320, "foodcategory": "Grain" },
-    "*-rice-perfect": { "satiety": 660, "foodcategory": "Grain" },
-    "*-rice-charred": { "satiety": 440, "foodcategory": "Grain" },
-    "*-partbaked": { "satiety": 300, "foodcategory": "Grain" },
-    "*-perfect": { "satiety": 600, "foodcategory": "Grain" },
-    "*-charred": { "satiety": 420, "foodcategory": "Grain" }
+    "*-flax-partbaked": { "satiety": 84, "foodcategory": "Grain" },
+    "*-flax-perfect": { "satiety": 192, "foodcategory": "Grain" },
+    "*-flax-charred": { "satiety": 120, "foodcategory": "Grain" },
+    "*-rice-partbaked": { "satiety": 192, "foodcategory": "Grain" },
+    "*-rice-perfect": { "satiety": 396, "foodcategory": "Grain" },
+    "*-rice-charred": { "satiety": 264, "foodcategory": "Grain" },
+    "*-partbaked": { "satiety": 180, "foodcategory": "Grain" },
+    "*-perfect": { "satiety": 360, "foodcategory": "Grain" },
+    "*-charred": { "satiety": 252, "foodcategory": "Grain" }
   },
   "transitionablePropsByType": {
     "*-partbaked": [

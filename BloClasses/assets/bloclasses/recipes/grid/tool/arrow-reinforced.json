@@ -1,7 +1,7 @@
 [
   {
     "ingredientPattern": "H_\tSB\tF_",
-    "requiresTrait": "bcbowyer",
+    "requiresTrait": "bcrangespecialist",
     "ingredients": {
       "H": {
         "type": "item",

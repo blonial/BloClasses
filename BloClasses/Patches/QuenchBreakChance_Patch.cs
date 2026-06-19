@@ -12,7 +12,7 @@ namespace BloClasses.Patches
     {
         private const float MetallurgistQuenchBreakChancePerIteration = 0.04f;
         private const float DefaultQuenchBreakChancePerIteration = 0.05f;
-        private const string MetallurgistTrait = "bcmetallurgist";
+        private const string MetallurgistTrait = "bcsuccessfulblacksmith";
 
         [ThreadStatic]
         private static float CurrentQuenchBreakChancePerIteration;
