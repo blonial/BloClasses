@@ -20,6 +20,12 @@
         },
         {
           "type": "item",
+          "code": "bloclasses:honeymeat",
+          "shapeElement": "bowl/meat stew/*",
+          "textureMapping": ["meat", "group6"]
+        },
+        {
+          "type": "item",
           "code": "game:redmeat-cured",
           "shapeElement": "bowl/meat stew/*",
           "textureMapping": ["meat", "group6"]
@@ -122,6 +128,12 @@
         },
         {
           "type": "item",
+          "code": "bloclasses:honeymeat",
+          "shapeElement": "bowl/red meat/*",
+          "textureMapping": ["meat", "group2"]
+        },
+        {
+          "type": "item",
           "code": "game:redmeat-cured",
           "shapeElement": "bowl/red meat/*",
           "textureMapping": ["meat", "group2"]
@@ -179,6 +191,12 @@
         {
           "type": "item",
           "code": "game:redmeat-raw",
+          "shapeElement": "bowl/red meat 2/*",
+          "textureMapping": ["meat", "group2"]
+        },
+        {
+          "type": "item",
+          "code": "bloclasses:honeymeat",
           "shapeElement": "bowl/red meat 2/*",
           "textureMapping": ["meat", "group2"]
         },

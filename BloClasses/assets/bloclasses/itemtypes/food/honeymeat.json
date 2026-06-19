@@ -36,7 +36,7 @@
   },
   "creativeinventory": { "general": ["*"], "items": ["*"] },
   "nutritionProps": {
-    "satiety": 220,
+    "satiety": 250,
     "health": 0,
     "foodcategory": "Protein"
   },

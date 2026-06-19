@@ -20,7 +20,7 @@
   "attributes": {
     "reinforcable": true,
     "partialAttachable": true,
-    "capacityLitres": 60,
+    "capacityLitres": 70,
     "openSound": { "path": "game:block/barrelopen", "pitch": { "avg": 1.0, "var": 0.25 } },
     "closeSound": { "path": "game:block/barrelclose", "pitch": { "avg": 1.0, "var": 0.25 } }
   },

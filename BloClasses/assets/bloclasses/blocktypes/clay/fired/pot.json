@@ -217,6 +217,7 @@
         "vegetable-onion": ["vegetable", "group6"],
         "pickledvegetable-onion": ["vegetable", "group6"],
         "fruit-redcurrant": ["fruit", "group6"],
+        "honeymeat": ["meat", "group6"],
         "redmeat-raw": ["meat", "group6"],
         "redmeat-cured": ["meat", "group6"],
         "egg-chicken-raw": ["egg", "group6"],

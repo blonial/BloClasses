@@ -28,6 +28,12 @@
   "attributes": {
     "backpack": {
       "quantitySlots": 7
+    },
+    "attachableToEntity": {
+      "categoryCode": "backpack",
+      "attachedShape": {
+        "base": "bloclasses:item/bag/clothier-backpack-attached"
+      }
     }
   },
   "storageFlags": 2,

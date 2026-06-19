@@ -1,10 +1,14 @@
 {
   "requiresTrait": "bcsommelier",
-  "ingredientPattern": "SPS,_R_,SPS",
+  "ingredientPattern": "SPS,NR_,SPS",
   "ingredients": {
+    "N": { "type": "item", "code": "game:metalnailsandstrips-{metal}" },
     "S": { "type": "item", "code": "game:stick" },
     "P": { "type": "item", "code": "game:plank-*" },
     "R": { "type": "item", "code": "game:resin" }
+  },
+  "allowedVariants": {
+    "metal": ["copper", "blackbronze", "tinbronze", "bismuthbronze", "iron", "silver", "gold", "meteoriciron", "steel", "electrum"]
   },
   "width": 3,
   "height": 3,
