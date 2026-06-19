@@ -133,9 +133,10 @@
       "z2": 11
     },
     "servingCapacity": 9,
+    "maxServingSize": 9,
     "storageType": 1,
     "maxTemperature": 200,
-    "mealBlockCode": "game:claypot-{color}-cooked",
+    "mealBlockCode": "bloclasses:claypot-{color}-cooked",
     "attachShape": { "base": "game:item/wearable/hooved/cookpot" },
     "wearableAttachment": true,
     "wearableCategoryCode": "frontrightside",
@@ -176,11 +177,12 @@
   "attributesByType": {
     "*-fired": {
       "cookingContainerSlots": 4,
-      "maxContainerSlotStackSize": 6,
+      "maxContainerSlotStackSize": 9,
+      "maxServingSize": 9,
       "dirtiedBlockCode": "game:dirtyclaypot-{color}-cooked"
     },
     "claypot-blue-cooked": {
-      "emptiedBlockCode": "game:claypot-blue-fired",
+      "emptiedBlockCode": "bloclasses:claypot-blue-fired",
       "allowHeating": true,
       "handleCookingContainerInteract": true,
       "textureMapping": {
@@ -316,7 +318,7 @@
       }
     },
     "*-cooked": {
-      "emptiedBlockCode": "game:claypot-{color}-fired",
+      "emptiedBlockCode": "bloclasses:claypot-{color}-fired",
       "allowHeating": true,
       "handleCookingContainerInteract": true
     }

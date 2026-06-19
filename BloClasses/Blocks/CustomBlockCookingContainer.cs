@@ -1,5 +1,7 @@
 ﻿using BloClasses.Extensions;
+using System;
 using System.Linq;
+using System.Reflection;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.GameContent;
@@ -8,7 +10,45 @@ namespace BloClasses.Blocks
 {
     public class CustomBlockCookingContainer : BlockCookingContainer
     {
+        private static readonly FieldInfo? MaxServingSizeField = FindInstanceField(typeof(CustomBlockCookingContainer), "maxServingSize");
+
         public IPlayer? LastTouchingPlayer;
+
+        public override void OnLoaded(ICoreAPI api)
+        {
+            base.OnLoaded(api);
+
+            var maxServingSize = Attributes?["maxServingSize"].AsInt(0) ?? 0;
+            if (maxServingSize <= 0)
+            {
+                maxServingSize = Attributes?["servingCapacity"].AsInt(0) ?? 0;
+            }
+            if (maxServingSize <= 0)
+            {
+                maxServingSize = Attributes?["maxContainerSlotStackSize"].AsInt(0) ?? 0;
+            }
+
+            if (maxServingSize > 0)
+            {
+                MaxServingSizeField?.SetValue(this, maxServingSize);
+            }
+        }
+
+        private static FieldInfo? FindInstanceField(Type? type, string fieldName)
+        {
+            while (type != null)
+            {
+                var field = type.GetField(fieldName, BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.DeclaredOnly);
+                if (field != null)
+                {
+                    return field;
+                }
+
+                type = type.BaseType;
+            }
+
+            return null;
+        }
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
