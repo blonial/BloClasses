@@ -26,7 +26,7 @@ namespace BloClasses.Patches
 
             components.AddRange(VtmlUtil.Richtextify(
                 capi,
-                Lang.Get("game:gridrecipe-requirestrait", Lang.Get($"BloClasses:traitname-{requiresTrait.RequiresTrait}")) + "\n",
+                Lang.Get("game:gridrecipe-requirestrait", Lang.Get($"game:traitname-{requiresTrait.RequiresTrait}")) + "\n",
                 CairoFont.WhiteSmallText()
             ));
         }

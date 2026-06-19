@@ -15,5 +15,6 @@
     ["______", "______", "__##__", "__##__", "______", "______"]
   ],
   "name": "Crock",
+  "requiresTrait": "bcorganized",
   "output": { "type": "block", "code": "bloclasses:crock-{color}-raw" }
 }

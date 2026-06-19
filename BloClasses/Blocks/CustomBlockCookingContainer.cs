@@ -73,15 +73,7 @@ namespace BloClasses.Blocks
                 var cookingRecipesTraitRequirement = world.Api.GetCookingRecipeTraitRequirementByCookinRecipeCode(cookingRecipe.Code);
                 if (cookingRecipesTraitRequirement != null && cookingRecipesTraitRequirement.RequiresTrait != null)
                 {
-                    var charSystem = world.Api.ModLoader.GetModSystem<CharacterSystem>();
-                    if (charSystem != null)
-                    {
-                        var charClass = charSystem.characterClasses.Find(c => c.Code == LastTouchingPlayer.Entity.WatchedAttributes.GetString("characterClass"));
-                        if (charClass != null && !charClass.Traits.Contains(cookingRecipesTraitRequirement.RequiresTrait))
-                        {
-                            return false;
-                        }
-                    }
+                    return TraitRequirementUtil.PlayerHasTrait(LastTouchingPlayer, cookingRecipesTraitRequirement.RequiresTrait);
                 }
             }
 

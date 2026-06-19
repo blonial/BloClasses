@@ -16,5 +16,20 @@ namespace BloClasses.Extensions
         {
             return api.ModLoader.GetModSystem<CookingRecipesTraitRequirementRegistrySystem>().CookingRecipesTraitRequirements.Find(c => c.Code == cookingRecipeCode);
         }
+
+        public static List<ClayFormingRecipeRequiresTrait> GetClayFormingRecipesTraitRequirements(this ICoreAPI api)
+        {
+            return api.ModLoader.GetModSystem<ClayFormingRecipesTraitRequirementRegistrySystem>().ClayFormingRecipesTraitRequirements;
+        }
+
+        public static ClayFormingRecipeRequiresTrait? GetClayFormingRecipeTraitRequirementByOutputCode(this ICoreAPI api, string? outputCode)
+        {
+            if (outputCode == null)
+            {
+                return null;
+            }
+
+            return api.GetClayFormingRecipesTraitRequirements().Find(c => c.OutputCode == outputCode);
+        }
     }
 }
