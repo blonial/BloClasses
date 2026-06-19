@@ -16,6 +16,7 @@ namespace BloClasses
         {
             api.RegisterBlockClass("CustomBlockCookingContainer", typeof(CustomBlockCookingContainer));
 
+            api.RegisterBlockEntityClass("CustomBlockEntityBarrel", typeof(CustomBlockEntityBarrel));
             api.RegisterBlockEntityClass("CustomBlockEntityFirepit", typeof(CustomBlockEntityFirepit));
             api.RegisterBlockEntityClass("CustomBlockEntityFruitTreeBranch", typeof(CustomBlockEntityFruitTreeBranch));
 

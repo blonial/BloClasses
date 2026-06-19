@@ -1,8 +1,8 @@
+using BloClasses.BlockEntities;
 using BloClasses.Extensions;
 using HarmonyLib;
 using System.Runtime.CompilerServices;
 using Vintagestory.API.Common;
-using Vintagestory.API.Datastructures;
 using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
@@ -62,43 +62,31 @@ namespace BloClasses.Patches
         }
     }
 
-    [HarmonyPatch(typeof(BlockEntityBarrel), nameof(BlockEntityBarrel.ToTreeAttributes))]
-    public static class BarrelSommelierAlcohol_ToTreeAttributes_Patch
-    {
-        public static void Postfix(BlockEntity __instance, ITreeAttribute tree)
-        {
-            if (__instance is BlockEntityBarrel barrel)
-            {
-                tree.SetBool("bloClassesRichAlcoholProduction", BarrelSommelierAlcoholState.GetRichAlcoholProduction(barrel));
-            }
-        }
-    }
-
-    [HarmonyPatch(typeof(BlockEntityBarrel), nameof(BlockEntityBarrel.FromTreeAttributes))]
-    public static class BarrelSommelierAlcohol_FromTreeAttributes_Patch
-    {
-        public static void Postfix(BlockEntity __instance, ITreeAttribute tree)
-        {
-            if (__instance is BlockEntityBarrel barrel)
-            {
-                BarrelSommelierAlcoholState.SetRichAlcoholProduction(barrel, tree.GetBool("bloClassesRichAlcoholProduction"));
-                BarrelSommelierAlcoholState.ApplyRichAlcoholRecipe(barrel);
-            }
-        }
-    }
-
     internal static class BarrelSommelierAlcoholState
     {
         private static readonly ConditionalWeakTable<BlockEntityBarrel, State> States = new();
 
         public static bool GetRichAlcoholProduction(BlockEntityBarrel barrel)
         {
+            if (barrel is CustomBlockEntityBarrel customBarrel)
+            {
+                return customBarrel.RichAlcoholProduction;
+            }
+
             return States.TryGetValue(barrel, out var state) && state.RichAlcoholProduction;
         }
 
         public static void SetRichAlcoholProduction(BlockEntityBarrel barrel, bool enabled)
         {
+            if (barrel is CustomBlockEntityBarrel customBarrel)
+            {
+                customBarrel.RichAlcoholProduction = enabled;
+                customBarrel.MarkDirty();
+                return;
+            }
+
             States.GetOrCreateValue(barrel).RichAlcoholProduction = enabled;
+            barrel.MarkDirty();
         }
 
         public static void ApplyRichAlcoholRecipe(BlockEntityBarrel barrel)

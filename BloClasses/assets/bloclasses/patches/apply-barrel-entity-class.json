@@ -1,0 +1,8 @@
+[
+  {
+    "op": "replace",
+    "path": "/entityClass",
+    "value": "CustomBlockEntityBarrel",
+    "file": "game:blocktypes/wood/barrel.json"
+  }
+]
