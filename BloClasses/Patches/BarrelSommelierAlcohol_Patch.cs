@@ -2,7 +2,9 @@ using BloClasses.BlockEntities;
 using BloClasses.Extensions;
 using HarmonyLib;
 using System.Runtime.CompilerServices;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
+using Vintagestory.API.MathTools;
 using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
@@ -62,6 +64,55 @@ namespace BloClasses.Patches
         }
     }
 
+    [HarmonyPatch(typeof(GuiDialogBarrel), "getContentsText")]
+    public static class BarrelSommelierAlcohol_GuiContentsText_Patch
+    {
+        private static readonly AccessTools.FieldRef<GuiDialog, ICoreClientAPI> CapiField =
+            AccessTools.FieldRefAccess<GuiDialog, ICoreClientAPI>("capi");
+
+        public static void Prefix(GuiDialogBarrel __instance, out BarrelRecipe? __state)
+        {
+            __state = null;
+
+            ICoreClientAPI? capi = CapiField(__instance);
+            IPlayer? player = capi?.World?.Player;
+            if (player == null || !TraitRequirementUtil.PlayerHasTrait(player, "bcsommelier"))
+            {
+                return;
+            }
+
+            BlockPos pos = __instance.BlockEntityPosition;
+            if (capi?.World?.BlockAccessor.GetBlockEntity(pos) is not BlockEntityBarrel barrel || barrel.Sealed)
+            {
+                return;
+            }
+
+            BarrelRecipe? richRecipe = BarrelSommelierAlcoholState.CreateRichAlcoholRecipe(barrel, barrel.CurrentRecipe);
+            if (richRecipe == null)
+            {
+                return;
+            }
+
+            __state = barrel.CurrentRecipe;
+            barrel.CurrentRecipe = richRecipe;
+        }
+
+        public static void Postfix(GuiDialogBarrel __instance, BarrelRecipe? __state)
+        {
+            if (__state == null)
+            {
+                return;
+            }
+
+            ICoreClientAPI? capi = CapiField(__instance);
+            BlockPos pos = __instance.BlockEntityPosition;
+            if (capi?.World?.BlockAccessor.GetBlockEntity(pos) is BlockEntityBarrel barrel)
+            {
+                barrel.CurrentRecipe = __state;
+            }
+        }
+    }
+
     internal static class BarrelSommelierAlcoholState
     {
         private static readonly ConditionalWeakTable<BlockEntityBarrel, State> States = new();
@@ -96,24 +147,32 @@ namespace BloClasses.Patches
                 return;
             }
 
-            var recipe = barrel.CurrentRecipe;
+            BarrelRecipe? richRecipe = CreateRichAlcoholRecipe(barrel, barrel.CurrentRecipe);
+            if (richRecipe != null)
+            {
+                barrel.CurrentRecipe = richRecipe;
+            }
+        }
+
+        public static BarrelRecipe? CreateRichAlcoholRecipe(BlockEntityBarrel barrel, BarrelRecipe? recipe)
+        {
             var output = recipe?.Output;
             var outputCode = output?.Code;
             if (recipe == null || output == null || outputCode == null || outputCode.Path == null)
             {
-                return;
+                return null;
             }
 
             if (!outputCode.Path.StartsWith("ciderportion-") || outputCode.Path.StartsWith("richciderportion-"))
             {
-                return;
+                return null;
             }
 
             var richOutput = output.Clone();
             richOutput.Code = new AssetLocation("bloclasses", "rich" + outputCode.Path);
             richOutput.Resolve(barrel.Api.World, "sommelier barrel recipe output");
 
-            barrel.CurrentRecipe = new BarrelRecipe
+            return new BarrelRecipe
             {
                 Code = recipe.Code + "-sommelier",
                 SealHours = recipe.SealHours,
