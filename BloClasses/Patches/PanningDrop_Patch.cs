@@ -78,16 +78,6 @@ namespace BloClasses.Patches
             float modifier = entity.Stats.GetBlended("panningDropQualityMod");
             float finalChance = isQualityDrop ? chance * GameMath.Max(0, modifier) : chance;
 
-            entity.World.Logger.Notification(
-                "[BloClasses/PanningDrop] Drop chance: code={0}, manMade={1}, quality={2}, baseChance={3}, modifier={4}, finalChance={5}",
-                GetDropCode(drop),
-                drop.ManMade,
-                isQualityDrop,
-                chance,
-                modifier,
-                finalChance
-            );
-
             if (!isQualityDrop)
             {
                 return chance;

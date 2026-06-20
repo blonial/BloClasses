@@ -1,0 +1,42 @@
+[
+  {
+    "ingredientPattern": "LLL\tLCL\tLCL",
+    "requiresTrait": "bcpaver",
+    "ingredients": {
+      "C": { "type": "item", "code": "game:clay-*" },
+      "L": {
+        "type": "item",
+        "code": "game:stone-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "chalk",
+          "chert",
+          "conglomerate",
+          "limestone",
+          "claystone",
+          "granite",
+          "sandstone",
+          "shale",
+          "basalt",
+          "peridotite",
+          "phyllite",
+          "slate",
+          "bauxite",
+          "suevite",
+          "whitemarble",
+          "greenmarble",
+          "redmarble",
+          "kimberlite"
+        ]
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "block",
+      "code": "game:cobblestone-{rock}",
+      "quantity": 3
+    }
+  }
+]

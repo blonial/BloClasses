@@ -17,6 +17,11 @@ namespace BloClasses.Patches
                 return;
             }
 
+            if (world.BlockAccessor.GetBlockEntity(pos.DownCopy()) is not BlockEntityFarmland)
+            {
+                return;
+            }
+
             var charSystem = world.Api.ModLoader.GetModSystem<CharacterSystem>();
             if (charSystem?.characterClasses == null)
             {
