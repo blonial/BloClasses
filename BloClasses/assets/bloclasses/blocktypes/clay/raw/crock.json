@@ -23,7 +23,7 @@
     { "code": "color", "states": ["blue", "red", "fire"] },
     { "code": "type", "states": ["raw"] }
   ],
-  "shape": { "base": "game:block/clay/crock/base" },
+  "shape": { "base": "bloclasses:block/clay/crock/base" },
   "textures": {
     "ceramic": { "base": "game:block/clay/{color}clay" },
     "label": { "base": "game:block/transparent" }

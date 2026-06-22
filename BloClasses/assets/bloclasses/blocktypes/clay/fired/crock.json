@@ -41,7 +41,7 @@
     },
     { "code": "type", "states": ["fired"] }
   ],
-  "shape": { "base": "game:block/clay/crock/base" },
+  "shape": { "base": "bloclasses:block/clay/crock/base" },
   "textures": {
     "ceramic": {
       "base": "game:block/clay/hardened/{color}",
