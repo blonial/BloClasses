@@ -15,6 +15,21 @@ namespace BloClasses.Patches
     {
         private const string ToolDurabilityMultiplierAttribute = "bloclassesToolDurabilityMul";
         private const string ToolDurabilityMaxMultiplierAttribute = "bloclassesToolDurabilityMaxMul";
+        private static readonly string[] ToolHeadPathPrefixes =
+        {
+            "axehead-",
+            "bladehead-",
+            "cleaverhead-",
+            "hammerhead-",
+            "hoehead-",
+            "knifeblade-",
+            "pickaxehead-",
+            "prospectingpickhead-",
+            "sawblade-",
+            "scythehead-",
+            "shovelhead-",
+            "spearhead-",
+        };
 
         [ThreadStatic]
         private static IPlayer? CurrentAnvilPlayer;
@@ -51,7 +66,7 @@ namespace BloClasses.Patches
                     return;
                 }
 
-                ApplyForgedToolHeadDurability(itemStack, CurrentAnvilPlayer);
+                ApplyForgedToolDurability(itemStack, CurrentAnvilPlayer);
             }
         }
 
@@ -110,9 +125,9 @@ namespace BloClasses.Patches
             }
         }
 
-        public static void ApplyForgedToolHeadDurability(ItemStack workItemStack, IPlayer player)
+        public static void ApplyForgedToolDurability(ItemStack workItemStack, IPlayer player)
         {
-            if (player?.Entity == null || !IsToolHead(workItemStack))
+            if (player?.Entity == null)
             {
                 return;
             }
@@ -124,7 +139,16 @@ namespace BloClasses.Patches
             }
 
             float durabilityMultiplier = modifier > 1f ? modifier : 1f + modifier;
-            workItemStack.Attributes.SetFloat(ToolDurabilityMultiplierAttribute, durabilityMultiplier);
+            if (IsToolHead(workItemStack))
+            {
+                workItemStack.Attributes.SetFloat(ToolDurabilityMultiplierAttribute, durabilityMultiplier);
+                return;
+            }
+
+            if (IsDurableTool(workItemStack))
+            {
+                ApplyToolDurabilityModifier(workItemStack, durabilityMultiplier);
+            }
         }
 
         public static void ApplyCopiedToolHeadDurability(ItemStack? itemStack, object craftingOutputSlot)
@@ -137,35 +161,13 @@ namespace BloClasses.Patches
             float outputModifier = itemStack.Attributes.GetFloat(ToolDurabilityMultiplierAttribute, 1f);
             float inputModifier = GetBestToolHeadDurabilityModifier(craftingOutputSlot);
             float modifier = inputModifier != 1f ? inputModifier : outputModifier;
-            float currentMaxModifier = itemStack.Attributes.GetFloat(ToolDurabilityMaxMultiplierAttribute, 1f);
-
             if (IsToolHead(itemStack) && inputModifier != 1f)
             {
                 itemStack.Attributes.SetFloat(ToolDurabilityMultiplierAttribute, inputModifier);
                 return;
             }
 
-            if (itemStack.Collectible.Durability <= 0)
-            {
-                return;
-            }
-
-            if (modifier <= 0 || modifier == 1)
-            {
-                return;
-            }
-
-            if (currentMaxModifier == modifier)
-            {
-                return;
-            }
-
-            int remainingDurability = itemStack.Collectible.GetRemainingDurability(itemStack);
-            int boostedDurability = Math.Max(1, (int)MathF.Round(remainingDurability * modifier));
-
-            itemStack.Attributes.SetInt("durability", boostedDurability);
-            itemStack.Attributes.SetFloat(ToolDurabilityMaxMultiplierAttribute, modifier);
-            itemStack.Attributes.RemoveAttribute(ToolDurabilityMultiplierAttribute);
+            ApplyToolDurabilityModifier(itemStack, modifier);
         }
 
         [HarmonyPatch(typeof(CollectibleObject), nameof(CollectibleObject.GetMaxDurability), typeof(ItemStack))]
@@ -287,7 +289,39 @@ namespace BloClasses.Patches
 
         private static bool IsToolHead(ItemStack itemStack)
         {
-            return itemStack.Collectible.Code.Path.Contains("head");
+            string path = itemStack.Collectible.Code.Path;
+            return ToolHeadPathPrefixes.Any(prefix => path.StartsWith(prefix, StringComparison.Ordinal));
+        }
+
+        private static bool IsDurableTool(ItemStack itemStack)
+        {
+            return itemStack.Collectible.Tool != null && itemStack.Collectible.Durability > 0;
+        }
+
+        private static void ApplyToolDurabilityModifier(ItemStack itemStack, float modifier)
+        {
+            if (itemStack.Collectible.Durability <= 0)
+            {
+                return;
+            }
+
+            if (modifier <= 0 || modifier == 1)
+            {
+                return;
+            }
+
+            float currentMaxModifier = itemStack.Attributes.GetFloat(ToolDurabilityMaxMultiplierAttribute, 1f);
+            if (currentMaxModifier == modifier)
+            {
+                return;
+            }
+
+            int remainingDurability = itemStack.Collectible.GetRemainingDurability(itemStack);
+            int boostedDurability = Math.Max(1, (int)MathF.Round(remainingDurability * modifier));
+
+            itemStack.Attributes.SetInt("durability", boostedDurability);
+            itemStack.Attributes.SetFloat(ToolDurabilityMaxMultiplierAttribute, modifier);
+            itemStack.Attributes.RemoveAttribute(ToolDurabilityMultiplierAttribute);
         }
     }
 }
