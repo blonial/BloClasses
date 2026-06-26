@@ -9,38 +9,38 @@ namespace BloClasses.BlockEntities
     {
         public override void OnReceivedClientPacket(IPlayer player, int packetid, byte[] data)
         {
-            ItemStack?[] beforeStacks = SnapshotInventory();
+            ItemStack?[] beforeStacks = SnapshotCookingSlots();
 
             base.OnReceivedClientPacket(player, packetid, data);
 
-            if (InventoryChanged(beforeStacks))
+            if (CookingSlotsChanged(beforeStacks))
             {
                 RememberPlayerForCookingContainer(player);
             }
         }
 
-        private ItemStack?[] SnapshotInventory()
+        private ItemStack?[] SnapshotCookingSlots()
         {
-            var snapshot = new ItemStack?[Inventory.Count];
+            var snapshot = new ItemStack?[otherCookingSlots.Length];
 
-            for (int i = 0; i < Inventory.Count; i++)
+            for (int i = 0; i < otherCookingSlots.Length; i++)
             {
-                snapshot[i] = Inventory[i].Itemstack?.Clone();
+                snapshot[i] = otherCookingSlots[i].Itemstack?.Clone();
             }
 
             return snapshot;
         }
 
-        private bool InventoryChanged(ItemStack?[] beforeStacks)
+        private bool CookingSlotsChanged(ItemStack?[] beforeStacks)
         {
-            if (beforeStacks.Length != Inventory.Count)
+            if (beforeStacks.Length != otherCookingSlots.Length)
             {
                 return true;
             }
 
-            for (int i = 0; i < Inventory.Count; i++)
+            for (int i = 0; i < otherCookingSlots.Length; i++)
             {
-                if (!StacksEqual(beforeStacks[i], Inventory[i].Itemstack))
+                if (!StacksEqual(beforeStacks[i], otherCookingSlots[i].Itemstack))
                 {
                     return true;
                 }

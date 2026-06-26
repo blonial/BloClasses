@@ -54,19 +54,6 @@ namespace BloClasses.Blocks
             return null;
         }
 
-        public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
-        {
-            LastTouchingPlayer = byPlayer;
-            return base.OnBlockInteractStart(world, byPlayer, blockSel);
-        }
-
-        public override bool TryPlaceBlock(IWorldAccessor world, IPlayer byPlayer, ItemStack itemstack, BlockSelection blockSel, ref string failureCode)
-        {
-            LastTouchingPlayer = byPlayer;
-            RememberPlayerOnStack(itemstack, byPlayer);
-            return base.TryPlaceBlock(world, byPlayer, itemstack, blockSel, ref failureCode);
-        }
-
         public override bool CanSmelt(IWorldAccessor world, ISlotProvider cookingSlotsProvider, ItemStack inputStack, ItemStack outputStack)
         {
             if (!DoesPlayerMeetTraitRequirement(world, cookingSlotsProvider, inputStack))
