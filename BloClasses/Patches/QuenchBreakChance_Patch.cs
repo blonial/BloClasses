@@ -13,15 +13,24 @@ namespace BloClasses.Patches
         private const float MetallurgistQuenchBreakChancePerIteration = 0.04f;
         private const float DefaultQuenchBreakChancePerIteration = 0.05f;
         private const string MetallurgistTrait = "bcsuccessfulblacksmith";
+        private const string ShatterChanceAttribute = "shatterchance";
+        private const string QuenchBreakChancePerIterationAttribute = "bcsQuenchBreakChancePerIteration";
 
         [ThreadStatic]
         private static float CurrentQuenchBreakChancePerIteration;
+
+        [ThreadStatic]
+        private static float CurrentShatterChanceBeforeQuench;
+
+        [ThreadStatic]
+        private static bool HasCurrentShatterChanceBeforeQuench;
 
         [HarmonyPatch(typeof(CollectibleBehaviorQuenchable), "CoolToTemperature")]
         public static class QuenchCoolingContextPatch
         {
             public static void Prefix(object[] __args)
             {
+                ClearQuenchApplyContext();
                 CurrentQuenchBreakChancePerIteration = GetQuenchBreakChancePerIteration(
                     __args.Length > 1 ? __args[1] as ItemSlot : null
                 );
@@ -29,7 +38,7 @@ namespace BloClasses.Patches
 
             public static void Finalizer()
             {
-                CurrentQuenchBreakChancePerIteration = 0;
+                ClearContext();
             }
         }
 
@@ -58,16 +67,16 @@ namespace BloClasses.Patches
                     return;
                 }
 
-                float storedChance = itemstack.Attributes.GetFloat("shatterchance", DefaultQuenchBreakChancePerIteration);
+                float storedChance = itemstack.Attributes.GetFloat(ShatterChanceAttribute, DefaultQuenchBreakChancePerIteration);
                 string storedLine = Lang.Get("quenchable-shatter-chance", storedChance);
-                string contextualLine = Lang.Get("quenchable-shatter-chance", GetContextualShatterChance(itemstack));
+                string contextualLine = Lang.Get("quenchable-shatter-chance", GetContextualShatterChance(itemstack, storedChance));
 
                 dsc.Replace(storedLine, contextualLine);
             }
 
             public static void Finalizer()
             {
-                CurrentQuenchBreakChancePerIteration = 0;
+                ClearContext();
             }
         }
 
@@ -81,21 +90,57 @@ namespace BloClasses.Patches
                     return;
                 }
 
-                __result = GetContextualShatterChance(itemstack);
+                __result = GetContextualShatterChance(itemstack, __result);
             }
         }
 
         [HarmonyPatch(typeof(CollectibleBehaviorQuenchable), "applyQuenchedStats")]
         public static class QuenchStoredShatterChancePatch
         {
+            public static void Prefix(CollectibleBehaviorQuenchable __instance, IWorldAccessor world, ItemStack itemstack)
+            {
+                ClearQuenchApplyContext();
+
+                if (CurrentQuenchBreakChancePerIteration <= 0)
+                {
+                    return;
+                }
+
+                CurrentShatterChanceBeforeQuench = GetContextualShatterChance(
+                    itemstack,
+                    itemstack.Attributes.GetFloat(ShatterChanceAttribute, __instance.BreakChancePerQuench)
+                );
+                HasCurrentShatterChanceBeforeQuench = true;
+            }
+
             public static void Postfix(CollectibleBehaviorQuenchable __instance, IWorldAccessor world, ItemStack itemstack)
+            {
+                if (CurrentQuenchBreakChancePerIteration <= 0 || !HasCurrentShatterChanceBeforeQuench)
+                {
+                    return;
+                }
+
+                SetStoredShatterChance(
+                    __instance,
+                    world,
+                    itemstack,
+                    CurrentShatterChanceBeforeQuench + CurrentQuenchBreakChancePerIteration
+                );
+                ClearQuenchApplyContext();
+            }
+        }
+
+        [HarmonyPatch(typeof(CollectibleBehaviorQuenchable), "applyTemperedStats")]
+        public static class QuenchTemperedStatsPatch
+        {
+            public static void Postfix(ItemStack itemstack)
             {
                 if (CurrentQuenchBreakChancePerIteration <= 0)
                 {
                     return;
                 }
 
-                __instance.SetShatterChance(world, itemstack, GetContextualShatterChance(itemstack));
+                itemstack.Attributes.SetFloat(QuenchBreakChancePerIterationAttribute, CurrentQuenchBreakChancePerIteration);
             }
         }
 
@@ -139,10 +184,37 @@ namespace BloClasses.Patches
             return playerProperty?.GetValue(world) as IPlayer;
         }
 
-        private static float GetContextualShatterChance(ItemStack itemstack)
+        private static float GetContextualShatterChance(ItemStack itemstack, float storedChance)
         {
-            int quenchIteration = itemstack.Attributes.GetInt("quenchIteration", 0);
-            return (quenchIteration + 1) * CurrentQuenchBreakChancePerIteration;
+            float storedBreakChancePerIteration = itemstack.Attributes.GetFloat(
+                QuenchBreakChancePerIterationAttribute,
+                DefaultQuenchBreakChancePerIteration
+            );
+
+            if (storedBreakChancePerIteration <= 0)
+            {
+                return storedChance;
+            }
+
+            return storedChance * CurrentQuenchBreakChancePerIteration / storedBreakChancePerIteration;
+        }
+
+        private static void SetStoredShatterChance(CollectibleBehaviorQuenchable behavior, IWorldAccessor world, ItemStack itemstack, float shatterChance)
+        {
+            behavior.SetShatterChance(world, itemstack, shatterChance);
+            itemstack.Attributes.SetFloat(QuenchBreakChancePerIterationAttribute, CurrentQuenchBreakChancePerIteration);
+        }
+
+        private static void ClearContext()
+        {
+            CurrentQuenchBreakChancePerIteration = 0;
+            ClearQuenchApplyContext();
+        }
+
+        private static void ClearQuenchApplyContext()
+        {
+            CurrentShatterChanceBeforeQuench = 0;
+            HasCurrentShatterChanceBeforeQuench = false;
         }
     }
 }

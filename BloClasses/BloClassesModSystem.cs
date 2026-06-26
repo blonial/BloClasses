@@ -62,6 +62,7 @@ namespace BloClasses
             typeof(QuenchBreakChance_Patch.QuenchInfoContextPatch),
             typeof(QuenchBreakChance_Patch.QuenchShatterChancePatch),
             typeof(QuenchBreakChance_Patch.QuenchStoredShatterChancePatch),
+            typeof(QuenchBreakChance_Patch.QuenchTemperedStatsPatch),
         };
 
         public override void Start(ICoreAPI api)

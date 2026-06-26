@@ -10,9 +10,14 @@ namespace BloClasses.Patches
     [HarmonyPatch(typeof(BlockCrop), nameof(BlockCrop.GetDrops))]
     public static class SuperPlants_Patch
     {
-        public static void Postfix(ref ItemStack[] __result, IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1f)
+        public static void Postfix(BlockCrop __instance, ref ItemStack[] __result, IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1f)
         {
             if (byPlayer?.Entity?.WatchedAttributes == null || __result == null)
+            {
+                return;
+            }
+
+            if (!IsFullyGrownHealthyCrop(__instance))
             {
                 return;
             }
@@ -60,6 +65,18 @@ namespace BloClasses.Patches
             {
                 __result = __result.Concat(extraDrops).ToArray();
             }
+        }
+
+        private static bool IsFullyGrownHealthyCrop(BlockCrop crop)
+        {
+            int growthStages = crop.Attributes?["cropProps"]["growthStages"].AsInt(0) ?? 0;
+            if (growthStages <= 0 || crop.CurrentCropStage < growthStages)
+            {
+                return false;
+            }
+
+            string blockPath = crop.Code?.Path ?? "";
+            return !blockPath.Contains("dead") && !blockPath.Contains("wither") && !blockPath.Contains("frost");
         }
     }
 }
