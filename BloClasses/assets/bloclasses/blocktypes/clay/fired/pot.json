@@ -179,7 +179,7 @@
       "cookingContainerSlots": 4,
       "maxContainerSlotStackSize": 9,
       "maxServingSize": 9,
-      "dirtiedBlockCode": "game:dirtyclaypot-{color}-cooked"
+      "dirtiedBlockCode": "bloclasses:dirtyclaypot-{color}-cooked"
     },
     "*-cooked": {
       "emptiedBlockCode": "bloclasses:claypot-{color}-fired",
